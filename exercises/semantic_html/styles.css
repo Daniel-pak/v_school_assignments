@@ -1,0 +1,72 @@
+body { 
+    background-color: black;
+}
+
+header { 
+    text-align:center; 
+    font-family: Helvetica;
+    font-size: 3em;
+    color: antiquewhite;
+}
+h3 { 
+    font-style: oblique;
+    font-size: .8em;
+}
+
+.head_photo { 
+    width: 80%
+}
+
+
+footer { 
+    width: 100%;
+    align-content: center;
+    
+}
+
+tr { 
+    column-count: 2;
+     
+}
+
+.table_photo { 
+    height: 350px; 
+    width: 550px;
+    text-align: center;
+}
+
+table { 
+    margin: 0px auto;
+}
+
+nav {
+  position: fixed;
+  left: 0px;
+  top: 50%;
+  width: 8em;
+  margin-top: -2.5em;
+  background-color: darkslategrey;
+  text-align: left;
+}
+
+ul { 
+    list-style: none;
+    line-height: 1.5em; 
+    font-style: oblique;
+    font-family: serif;
+    padding-left: 0px;
+}
+
+footer { 
+    text-align: center;
+}
+button { 
+    height: 120%;
+    width: 25em; 
+    
+}
+
+div { 
+    text-align:center;
+    color: white;
+}
