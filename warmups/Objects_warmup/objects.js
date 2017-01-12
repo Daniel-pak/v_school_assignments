@@ -92,13 +92,19 @@ var myMacBookPro = {
 var coffeeMachine = { 
     color: "Black",
     isBrewing: false, 
-    isCleaned: false, 
+    isCleaned: true, 
     turnOn: function() { 
+        if (this.isBrewing === false)
         this.isBrewing = true; 
         console.log("Your coffee is now brewing! Please come back in 2 minutes to grab a fresh cup!"); 
     }, 
     clean: function() { 
-        this.isCleaned = true; ;
+        this.isCleaned = true; 
         console.log("Your machine is cleaned and ready to brew some fresh coffee! Please turn on the machine");
+    },
+    turnOff: function() { 
+        this.isBrewing = false; 
+        console.log("Your coffee maker is now off, please clean the machine.");
+        this.isCleaned = false;
     }
 }
