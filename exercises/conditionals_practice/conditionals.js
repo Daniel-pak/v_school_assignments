@@ -1,8 +1,10 @@
 var lowerNumber = function(number1, number2) {
     if (number1 > number2) { 
         console.log(number2 + " is the lower number");
-    } else {
+    } else if (number2 > number1) {
         console.log(number1 + " is the lower number");
+    } else {
+        console.log("The numbers are equal");
     }
 }
 // --------------------------------------------------
@@ -19,12 +21,19 @@ var troubleBrewing = function(aSmile, bSmile) {
         return false; 
     }
 }
+
+/* 
+function monkeyTrouble(aSmile, bSmile) { 
+    return aSmile === bSmile;
+}
+*/
+
 // ---------------------------------------------------
 
 var greeting = function(time) { 
     var time = new Date(); 
     var hour = time.getHours();
-
+    //you can method chain like var hour = new Date().getHours();
     if(hour < 12) {
         console.log("Good Morning!");
     } else if (hour >= 12 && hour < 17) { 
