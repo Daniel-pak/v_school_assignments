@@ -1,0 +1,43 @@
+h1 { 
+    display: block;
+    clear: left;
+}
+
+.sunglasses { 
+    font-size: 5em;
+    margin-left: 100px;
+    border: 3px solid grey;
+    padding: 10px; 
+}
+
+h2 { 
+    font-size: 3em;
+    color: darkmagenta;
+}
+
+ol { 
+    list-style: none;
+}
+
+.row { 
+    margin: 20px; 
+    border: 5px solid black;
+}
+
+h1 { 
+    font-size: 8em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.reference_container, .text { 
+    font-size: 2em;
+}
+
+a { 
+    text-decoration: none;
+    color: white;
+}
+
+body { 
+    background-color: #F4F6FF;
+}

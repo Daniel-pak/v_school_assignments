@@ -37,9 +37,7 @@ document.getElementById("clear_btn").addEventListener("click", function () {
 });
 
 document.getElementById("submit_btn").addEventListener("click", function () {
-    if (boo !== 0 || gooma !== 0 || bomb_omb !== 0 || cheep_cheep !== 0) {
     document.getElementById("total_string").innerHTML = "You're total price for having caught " + cheep_cheep + " Cheep cheep, " + boo + " boos, " + bomb_omb + " Bomb-ombs and " + goomba + " Goombas is stated above. Please pay via MarioCoins through paypal.";
-    }
 });
 
 document.getElementById("facebook_btn").addEventListener("click", function() { 
