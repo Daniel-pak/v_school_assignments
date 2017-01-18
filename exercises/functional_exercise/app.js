@@ -6,7 +6,7 @@ Write a function that accepts one number as a parameter, and returns whether tha
 
 Write a function that accepts a string as a parameter. If the length of the string is less than or equal to twenty characters long, return the string concatenated with itself (string + string). If the string is more than twenty characters long, return the first half of the string.*/
 
-function sum(num1, num2) { 
+/*function sum(num1, num2) { 
     console.log(num1 + num2);
 }
 
@@ -61,4 +61,20 @@ function fibonacci(n) {
     console.log(startNumber);
 }
 
-fibonacci(7);
+fibonacci(7);*/
+
+function quadratic(a, b, c) { 
+    var empty = [];
+    var x = ((b * b) - (4*a*c));
+    x = Math.sqrt(x);
+    y = ((-(b) + x))/(2*a); 
+    z = ((-(b) - x))/(2*a);
+    if (y == "NaN" || z == "NaN") { 
+        console.log("cannot do imaginary numbers");
+    } else {
+    empty.push(y, z);
+    console.log(empty);
+    }
+}
+
+quadratic(1, -3, 4);

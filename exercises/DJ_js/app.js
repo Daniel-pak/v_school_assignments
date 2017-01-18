@@ -1,3 +1,7 @@
+window.addEventListener('scroll', function() {
+    document.getElementById("color_changer").style.backgroundColor = 'orange';
+});
+
 document.getElementById("color_changer").addEventListener("dblclick", function () {
     document.getElementById("color_changer").style.backgroundColor = "green";
 });

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Super Mario 256";
+    src: url(SuperMario256.ttf);
+}
+
+.container { 
+    margin-right: 30px; 
+    margin-left: 30px; 
+    font-family: "Super Mario 256";
+    color: red; 
+}
+.name_box { 
+    background-color: yellow;
+    height: 30px; 
+}
+.image_box { 
+    background-color: red; 
+    height: 150px;    
+}
+img { 
+    height: 100%;
+}
+.white_box { 
+    height: 100px; 
+}
+.right_image_box { 
+    height: 25px; 
+    background-color: yellow;
+}
+p { 
+    font-size: .75em;    
+}
+h3 { 
+    margin-top: 3px;
+}
