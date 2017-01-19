@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form id='travel_form'>
+        <div>
+            <h2>Some basic information before you fly</h2>
+            <input id="first_name" class="block" type="text" placeholder="First Name">
+            <input id="last_name" class="block" type="text" placeholder="Last Name">
+            <input id="age" class="block" type="number" placeholder="Age">
+        </div>
+        <h2>Gender</h2>
+        <label for="male">Male</label>
+        <input name="gender" type="radio" value="male" id="male">
+        <label for="female">Female</label>
+        <input name="gender" type="radio" value="female" id="female">
+        <br>
+        <h2>Destination</h2>
+        <label for="">Destination</label>
+        <select>
+            <option name="destination" value="PR">Puerto Rico</option>
+            <option name="destination" value="Alaska">Alaska</option>
+            <option name="destination" value="Domestic">Domestic USA</option>
+        </select>
+        <br>
+        <h2>Dietary Restriction</h2>
+        <label for="Veg">Vegetarian</label>
+        <input id="Veg" type="checkbox" name="diet" value="Vegetarian">
+        <label for="GF">Gluten Free</label>
+        <input id="GF" type="checkbox" name="diet" value="Gluten Free">
+        <label for="LF">Lactose Free</label>
+        <input id="LF" type="checkbox" name="diet" value="Lactose Free">
+        <label for="NA">None</label>
+        <input id="NA" type="checkbox" name="diet" value="NA">
+        <h4>Any additional information for us?</h4>
+        <textarea name="" id="comments" cols="50" rows="10" placeholder="Anything else you'd like to let us know?"></textarea>
+        <br>
+        <button type="button" id='btn'>Submit</button>
+    </form>
+    <script src='app.js'></script>
+</body>
+
+</html>
