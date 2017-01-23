@@ -1,0 +1,72 @@
+body {
+    background: url(images/keep_exploring.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.nav {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    background-color: #2F2933;
+    opacity: .8;
+}
+
+.container {
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+p {
+    color: #29D9C2;
+}
+
+a {
+    margin-top: 10px;
+    color: #01A2A6;
+    margin-left: 5px;
+    font-size: 1.7em;
+}
+
+.projects {
+    height: 100%;
+    width: 75%;
+}
+
+.logo {
+    height: 40px;
+    padding: 0px 0px 0px 0px;
+}
+
+.bg-warning {
+    opacity: .8;
+    background-color: grey;
+    border: 1px solid #29D9C2;
+    font-size: 1.4em;
+}
+
+@media only screen and (max-width: 555px) {
+    .container {
+        margin-top: 100px;
+    }
+    .navbar-text {
+        float: left!important;
+        margin-left: 18%;
+    }
+    .btn {
+        float: left!important;
+    }
+    .offset {
+        margin-left: 20px
+    }
+    a {
+        display: inline;
+    }
+}

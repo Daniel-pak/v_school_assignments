@@ -1,22 +1,23 @@
 var readline = require('readline-sync');
 //Player and Monster Objects + standard variables
 var player = {
-    hitPoints: 500,
+    hitPoints: 100,
     level: 1,
     attackPower: 9,
     isAlive: true,
-    inventory: ["Health Potion, Map, Chicken Bone"];
+    inventory: ["Health Potion", "Map", "Chicken Bone"]
 }
 var monster = {
-    hitPoints: 500,
+    hitPoints: 100,
     level: 1,
     attackPower: 10,
     isAlive: true
 }
 var walky = true;
 var enemies = ["Kamala", "Alinafe", "Merlyn"];
-var number = Math.floor(Math.random() * 3);
-var currentMonster = enemies[number];
+
+var currentMonster = enemies[generateRandomNumber(3)];
+
 //***********************************Functions*****************************************
 function monsterAttack() {
     var attackPowerScl = Math.floor(Math.random() * 10 + 1);
@@ -25,14 +26,23 @@ function monsterAttack() {
         console.log("You are attacked by " + currentMonster + "!");
         player.hitPoints -= totalDamage;
         console.log(currentMonster + " deals " + totalDamage + " to you!");
-        console.log("Your current health remaining: " + player.hitPoints);
-        console.log("***************************************************")
         if (player.hitPoints > 0) {
+            console.log("Your current health remaining: " + player.hitPoints);
+            console.log("***************************************************");
             fightMonster();
-        } else {
+        } else if (player.hitPoints <= 0) {
+            console.log("Your current health remaining: 0");
+            console.log("***************************************************");
             death();
         }
+
     }
+}
+
+
+function generateRandomNumber(x) {
+    var number = Math.floor(Math.random() * x);
+    return number;
 }
 
 function death() {
@@ -43,6 +53,12 @@ function death() {
 function fightMonster() {
     var attackPowerScl = Math.floor(Math.random() * 10 + 1);
     var totalDamage = (attackPowerScl * player.attackPower);
+    if (player.hitPoints < 100 && player.inventory.length === 3) {
+        healthPotion();
+    };
+    var attacking = readline.keyIn("To attack press a", {
+        limit: 'a'
+    });
     if (totalDamage < monster.hitPoints) {
         while (monster.isAlive === true && player.isAlive === true) {
             if (monster.hitPoints > 0 && player.hitPoints > 0) {
@@ -56,25 +72,32 @@ function fightMonster() {
             }
         }
     } else {
+        monster.isAlive = false;
+        player.hitPoints = 100;
         console.log("You attack " + currentMonster + " and deal " + totalDamage + " damage!");
         console.log("You have slain " + currentMonster + "!");
         console.log("Your victory has replenished you and you at now back at full health!");
-        player.hitPoints = 100;
+        console.log("*****************************************************")
         console.log("You have now gained a special item!");
-        monster.isAlive = false;
-        console.log("Great Warrior! You have slain the best of Oghenero!\nYou may now claim a coveted item of this land\nthe Great Scimitar of Deadelus.\nWith this sword, you may slay any beast in this land with\na mighty swing. Please use this wisely.");
-        console.log("Congratulations! You have won the game! You may now\ntype 'print' to show your stats and inventory!")
+        console.log("Great Warrior! You have slain the best of Oghenero!\nYou may now claim a coveted item of this land\nthe Great Scimitar of Deadelus.\n*******************************************\nWith this sword, you may slay any beast in this land with\na mighty swing. Please use this wisely.");
+        console.log("Congratulations! You have won the game! You may now\ntype 'print' to show your stats and inventory!");
+        winner();
     }
 }
 
 function winner() {
-    player.inventory.push("Scimitar of Deadelus");
-
+    player.inventory.push(" Scimitar of Deadelus");
+    var inventory = readline.prompt();
+    if (inventory === "print") {
+        console.log("Player name: " + playerName + "\nyour inventory contains: " + player.inventory + "\nYour hitpoints: " + player.hitPoints); // for loop implementation here.
+    }
 }
 
 function walking() {
     while (walky === true) {
-        var walk = readline.keyIn('To walk please press w! ', {limit: 'w'});
+        var walk = readline.keyIn('To walk please press w! ', {
+            limit: 'w'
+        });
         var attack = Math.floor(Math.random() * 4 + 1);
         if (attack === 4) {
             console.log("You are being attacked! Please get ready for battle!!");
@@ -106,7 +129,7 @@ function walkingTillAttacked() {
                 console.log("........................");
                 console.log("........................");
                 if (monster.isAlive === true) {
-                        monsterAttack();
+                    monsterAttack();
                     if (player.isAlive === true)
                         fightMonster();
                 }
@@ -114,6 +137,18 @@ function walkingTillAttacked() {
         }
     }
 }
+
+function healthPotion() {
+    var healthpotion = readline.keyIn("Use a health potion? Click y for yes or n for no", {
+        limit: 'yn'
+    });
+    if (player.inventory.length === 3 && healthpotion === 'y') {
+        player.hitPoints += 20;
+        console.log("Your hitpoints are healed a bit, your current hitpoints: " + player.hitPoints);
+        player.inventory.shift();
+    }
+}
+
 
 
 //************************************GAME HERE******************************************
@@ -123,3 +158,4 @@ console.log("Great! Thank you " + playerName + "! Please enjoy yourself");
 
 walking();
 walkingTillAttacked();
+
