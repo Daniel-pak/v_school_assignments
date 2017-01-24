@@ -8,9 +8,9 @@ var player = {
     inventory: ["Health Potion", "Map", "Chicken Bone"]
 }
 var monster = {
-    hitPoints: 100,
+    hitPoints: 10 * generateRandomNumber(10),
     level: 1,
-    attackPower: 10,
+    attackPower: generateRandomNumber(10),
     isAlive: true
 }
 var walky = true;
