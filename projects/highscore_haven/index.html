@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <h1 class='header'>Your High Score Haven <i class='glyphicon glyphicon-play-circle'></i></h1>
+        </div>
+    </nav>
+    <div class="container">
+        <div class='row information'>
+            <div class='col-xs-6 text'>
+                <p>Welcome to Your High Score Haven! A community of collaborative gamers who love to show off their accomplishments!
+                    <br>
+                    <hr> To join the rankings, please fill out the form to the right and hit that submit button!
+                    <br>
+                    <hr> Work your way up the ladder for a great prize! This week's prizes are shown below! But remember, only the top three scorers will be rewarded! Best of luck to you!
+                    <br>
+                    <hr> And don't forget - if you like the page, please hit that like button! Thanks for visiting!
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <form class="form-horizontal form">
+                    <input class="form-group form-control" type="text" placeholder="Name">
+                    <input class="form-group form-control " type="text" placeholder="Game">
+                    <input class="form-group form-control " type="text" placeholder="Date">
+                    <button id="" class="btn btn-warning">Click for current date</button>
+                    <br>
+                    <br>
+                    <input class="form-group form-control " type="number" placeholder="High Score">
+
+                    <label for="trashtalk">Would you like to add a randomly generated trash talk comment??
+                        <input class="" type="checkbox" name="trashtalk" id="trashtalk">
+                    </label>
+                    <button id="" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 border">
+                <h3 class="text-center">First Place</h3>
+                <img class="img-responsive" src="http://compass.xbox.com/assets/49/56/4956e588-a091-4c60-a103-c5f2d6a3dcf5.jpg?n=Xbox-One-S-GOW-4_gallery_1056x594_18.jpg" alt="">
+            </div>
+            <div class="col-xs-4 border">
+                <h3 class="text-center">Second Place</h3>
+                <img class="img-responsive" src="http://www.crete1941.com/wp-content/uploads/2016/12/font-b-Vibration-b-font-Function-Deep-font-b-Bass-b-font-Computer-Gaming-font.jpg" alt="">
+            </div>
+            <div class="col-xs-4 border">
+                <h3 class="text-center">Third Place</h3>
+                <img class="img-responsive" src="http://emmerollins.com/blog/wp-content/uploads/2013/06/amazongiftcard100.jpeg" alt="">
+            </div>
+        </div>
+        <div class="row highscore_table">
+            <div class="col-xs-offset-1 col-xs-10">
+                <table class='table table-bordered'>
+                    <tr class="warning">
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Game</th>
+                        <th>High Score</th>
+                        <th rowspan="2">Comments</th>
+                    </tr>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="hh.js"></script>
+</html>

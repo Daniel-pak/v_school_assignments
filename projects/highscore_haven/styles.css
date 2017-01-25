@@ -1,0 +1,44 @@
+.form {
+    border: 2px black solid;
+    padding: 10px 10px 10px 40px;
+}
+
+body {
+    background: url(images/cufyw1c97w8-pawel-kadysz.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #105B63;
+}
+
+.information {
+    margin-top: 120px;
+    color: #FFFAD5;
+}
+
+.img-responsive {
+    height: 250px;
+}
+
+.border {
+    margin-top: 20px;
+    border: 2px solid #DB9E36;
+    color: #FFFAD5;
+}
+
+.text {
+    font-size: 1.3em;
+}
+
+.header {
+    color: #FFFAD5;
+    font-size: 3em;
+}
+
+.highscore_table { 
+    margin-top: 30px;
+}

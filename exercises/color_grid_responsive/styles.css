@@ -37,9 +37,19 @@
     display: inline-block;
 }
 
+div { 
+    transition: all 1s ease-in-out 1s
+}
+
+
+div:hover { 
+    background-color:black;
+}
+
 @media only screen and (max-width: 768px) { 
     .box { 
         display: block;
         width: 100%;
     }
 }
+
