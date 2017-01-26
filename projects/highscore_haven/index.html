@@ -21,25 +21,24 @@
                     <br>
                     <hr> To join the rankings, please fill out the form to the right and hit that submit button!
                     <br>
-                    <hr> Work your way up the ladder for a great prize! This week's prizes are shown below! But remember, only the top three scorers will be rewarded! Best of luck to you!
-                    <br>
-                    <hr> And don't forget - if you like the page, please hit that like button! Thanks for visiting!
+<!--                    <hr> And don't forget - if you like the page, please hit that like button! Thanks for visiting!-->
                 </p>
             </div>
             <div class="col-xs-6">
                 <form class="form-horizontal form" id="forms">
                     <input id="name" class="form-group form-control" type="text" placeholder="Name" minlength="2" required>
-                    <input id="game" class="form-group form-control " type="text" placeholder="Game">
-                    <input id="date" class="form-group form-control " type="date" placeholder="Date">
-                    <input id="highscore" class="form-group form-control " type="number" placeholder="High Score" required>
+                    <input id="game" class="form-group form-control " type="text" placeholder="Game" required>
+                    <input id="date" class="form-group form-control " type="date" placeholder="Date" required>
+                    <input id="highscore" class="form-group form-control " type="number" placeholder="High Score" required value=0>
 
                     <label for="trashtalk">Would you like to add a randomly generated trash talk comment??
                         <input class="" type="checkbox" name="trashtalk" id="trashtalk" val="true">
                     </label>
-                    <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                    <input id="submit" type="submit" class="btn btn-primary">
                 </form>
             </div>
         </div>
+        <!--
         <div class="row">
             <div class="col-xs-4 border">
                 <h3 class="text-center">First Place</h3>
@@ -54,14 +53,15 @@
                 <img class="img-responsive" src="http://emmerollins.com/blog/wp-content/uploads/2013/06/amazongiftcard100.jpeg" alt="">
             </div>
         </div>
-        <div class="row highscore_table">
+-->
+      <div class="row highscore_table">
             <div class="col-xs-offset-1 col-xs-10">
-                <table class='table table-bordered' id="table">
+                <table class='table table-bordered sortable' id="table">
                     <tr class="warning">
-                        <th>Name</th>
+                        <th id="name">Name</th>
                         <th>Date</th>
                         <th>Game</th>
-                        <th>High Score</th>
+                        <th id="score">High Score</th>
                         <th colspan="2">Comments</th>
                     </tr>
                     <tbody id="tableBody">
@@ -72,6 +72,7 @@
         </div>
     </div>
 </body>
+
 <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 <script src="hh.js"></script>
 
