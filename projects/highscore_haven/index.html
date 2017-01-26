@@ -27,19 +27,16 @@
                 </p>
             </div>
             <div class="col-xs-6">
-                <form class="form-horizontal form">
-                    <input class="form-group form-control" type="text" placeholder="Name">
-                    <input class="form-group form-control " type="text" placeholder="Game">
-                    <input class="form-group form-control " type="text" placeholder="Date">
-                    <button id="" class="btn btn-warning">Click for current date</button>
-                    <br>
-                    <br>
-                    <input class="form-group form-control " type="number" placeholder="High Score">
+                <form class="form-horizontal form" id="forms">
+                    <input id="name" class="form-group form-control" type="text" placeholder="Name" minlength="2" required>
+                    <input id="game" class="form-group form-control " type="text" placeholder="Game">
+                    <input id="date" class="form-group form-control " type="date" placeholder="Date">
+                    <input id="highscore" class="form-group form-control " type="number" placeholder="High Score" required>
 
                     <label for="trashtalk">Would you like to add a randomly generated trash talk comment??
-                        <input class="" type="checkbox" name="trashtalk" id="trashtalk">
+                        <input class="" type="checkbox" name="trashtalk" id="trashtalk" val="true">
                     </label>
-                    <button id="" class="btn btn-primary">Submit</button>
+                    <button id="submit" type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -59,21 +56,23 @@
         </div>
         <div class="row highscore_table">
             <div class="col-xs-offset-1 col-xs-10">
-                <table class='table table-bordered'>
+                <table class='table table-bordered' id="table">
                     <tr class="warning">
                         <th>Name</th>
                         <th>Date</th>
                         <th>Game</th>
                         <th>High Score</th>
-                        <th rowspan="2">Comments</th>
+                        <th colspan="2">Comments</th>
                     </tr>
-                    <tbody>
-                        
+                    <tbody id="tableBody">
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 <script src="hh.js"></script>
+
 </html>
