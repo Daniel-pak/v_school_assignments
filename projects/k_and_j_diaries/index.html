@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="queries.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
                         <img alt="Brand" src="http://kandjdiaries.com/wp-content/themes/k_and_j/img/logo-h.png">
                     </a>
                 </div>
-                <div class="col-xs-6 navbar_options text-center">
+                <div class="col-xs-6 navbar_options text-center nav_options">
                     <div class="dropdown">
                         <a class="navbar_options dropdown-toggle" data-toggle="dropdown">Categories</a>
                         <ul class="dropdown-menu">
@@ -69,9 +70,12 @@
                         <a href="#">Contact</a>
                     </div>
                 </div>
-                <div class="inline pull-right">
-                    <form class="navbar-form navbar-left" role="search">
-                        <input type="text" class="form-control" placeholder="Search">
+                <div class="inline pull-right search_bar">
+                    <form class="navbar-form navbar-left " role="search">
+                        <div class="has-feedback has-feedback-right">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <i class='form-control-feedback glyphicon glyphicon-search'></i>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -102,8 +106,13 @@
     <!-- end of webpage main carousel -->
     <div class="container-fluid text-center email_address">
         <div class="row">
-            <div class="col-xs-3 col-xs-offset-4">
-                <input type="text" placeholder="Email Address" class='form-control'>
+            <div class="col-sm-12 col-md-3 col-md-offset-4">
+                <div class='input-group'>
+                    <input type="text" placeholder="Email Address" class='form-control'>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default"><i class="glyphicon glyphicon-envelope contact_icons"></i></button>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
@@ -111,13 +120,13 @@
 
     <div class="container-fluid blog">
         <div class="row">
-            <div class="col-xs-offset-2 col-xs-5 text-center">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-6 col-md-offset-2 col-md-5 text-center">
                 <!-- blog -->
                 <h6 class='text-muted line'>Jan 19, 2017</h6>
                 <h3 class='contact_icons'>4 WAYS TO CLEAR YOUR SKIN</h3>
                 <h6 class='text-muted'><a href="#"><i>Beauty</i></a></h6>
                 <img src="http://kandjdiaries.com/wp-content/uploads/2017/01/DSC_0049.jpg" class="img-responsive blog-image" alt="">
-                <p class='text-left'> A couple of years ago my skin went through a terrible phase. My face was filled with pimples and acne and time seemed to have slowed down during those two years. I started doing these 4 things that are listed below and I saw a major improvement in my skin! Whenever my skin isn’t looking as <a href="#">[…]</a></p>
+                <p class='text-left'>A couple of years ago my skin went through a terrible phase. My face was filled with pimples and acne and time seemed to have slowed down during those two years. I started doing these 4 things that are listed below and I saw a major improvement in my skin! Whenever my skin isn’t looking as <a href="#">[…]</a></p>
                 <br>
                 <button class='btn read_more text-muted'>READ MORE</button>
                 <br>
@@ -141,7 +150,10 @@
                     </div>
                     <br>
                     <h6 class='comment'><span class="contact_icons">0</span> Comments</h6>
-                    <h4 class='related text-center text-muted lines related_box'>RELATED</h4>
+                </div>
+                <div class="row">
+                    <h4 class='related text-muted related_box'>RELATED</h4>
+                    <hr class='hor-line'>
                 </div>
                 <div class="row">
                     <div class="col-xs-3">
@@ -168,7 +180,9 @@
                     <button class='btn read_more text-muted'>READ MORE</button>
                     <br>
                 </div>
+
                 <!-- content end -->
+
                 <div class='row'>
                     <div class="buttons">
                         <div class="col-xs-1 social_media">
@@ -189,9 +203,14 @@
                     </div>
                     <br>
                     <h6 class='comment'><span class="contact_icons">0</span> Comments</h6>
-                    <h4 class='related text-center text-muted lines related_box'>RELATED</h4>
                 </div>
+                <div class="row">
+                    <h4 class='related text-muted related_box'>RELATED</h4>
+                    <hr class='hor-line'>
+                </div>
+
                 <!-- social media buttons and related header -->
+
                 <div class="row">
                     <div class="col-xs-3">
                         <img src="http://kandjdiaries.com/wp-content/uploads/2014/12/winter-blues5-120x120.jpg" class='img-responsive' alt="">
@@ -207,7 +226,9 @@
                     </div>
                 </div>
                 <hr>
+
                 <!-- end of related images -->
+
                 <div class='row related_box'>
                     <h6 class='text-muted line'>Jan 12, 2017</h6>
                     <h3 class="contact_icons">THE NEW YEAR BRINGS NEW<br>BLESSINGS</h3>
@@ -238,9 +259,14 @@
                     </div>
                     <br>
                     <h6 class='comment'><span class="contact_icons">0</span> Comments</h6>
-                    <h4 class='related text-center text-muted lines related_box'>RELATED</h4>
                 </div>
+                <div class="row">
+                    <h4 class='related text-muted related_box'>RELATED</h4>
+                    <hr class='hor-line'>
+                </div>
+
                 <!-- social media buttons and related header -->
+
                 <div class="row">
                     <div class="col-xs-3">
                         <img src="http://kandjdiaries.com/wp-content/uploads/2014/08/washington-682x1024-120x120.jpg" class='img-responsive' alt="">
@@ -261,45 +287,61 @@
                     <h6 class='contact_icons text-right'><i>Next</i></h6>
                 </div>
             </div>
+
             <!-- Main body content end-->
-            <div class="col-xs-3">
+
+            <div class="col-xs-12 col-sm-4 col-md-3">
                 <!--Advertisements and side bar information -->
                 <div class='row right_row container-right'>
                     <!-- follow / 4 buttons -->
-                    <h5 class='text-muted topbox text-center label-right'>FOLLOW</h5>
-                    <div class="col-xs-10 col-xs-offset-1">
-                        <div class="col-xs-3">
-                            <a href="#" class="">
-                                <i class="fa fa-facebook contact_icons"></i>
-                            </a>
-                        </div>
-                        <div class="col-xs-3">
-                            <a href="#" class="">
-                                <i class="fa fa-instagram contact_icons"></i>
-                            </a>
-                        </div>
-                        <div class="col-xs-3">
-                            <a href="#" class="">
-                                <i class="fa fa-twitter contact_icons"></i>
-                            </a>
-                        </div>
-                        <div class="col-xs-3">
-                            <a href="#" class="">
-                                <i class="fa fa-pinterest contact_icons"></i>
-                            </a>
+                    <h5 class='text-muted text-center label-right'>FOLLOW</h5>
+                    <!--Follow widget-->
+                    <div class="col-xs-12  col-sm-10 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <a href="#" class="">
+                                            <i class="fa fa-facebook contact_icons"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <a href="#" class="">
+                                            <i class="fa fa-instagram contact_icons"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <a href="#" class="">
+                                            <i class="fa fa-twitter contact_icons"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <a href="#" class="">
+                                            <i class="fa fa-pinterest contact_icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row subscribe container-right">
-                    <h5 class='text-muted text-center label-right'>SUBSCRIBE</h5>
-                    <div class="col-xs-10 col-xs-offset-1 subscribe_box">
+                    <h5 class='text-muted text-center label-right follow'>SUBSCRIBE</h5>
+                    <!--Subscribe widget-->
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 subscribe_box">
                         <h6 class='text-center'>Be the first to know...</h6>
                         <br>
-                        <input type="text" class="form-control email-input" placeholder="EMAIL ADDRESS">
+                        <div class='input-group'>
+                            <input type="text" class="form-control email-input" placeholder="EMAIL ADDRESS">
+                            <span class="input-group-btn">
+                            <button class='btn btn-default'><i class='glyphicon glyphicon-envelope  contact_icons'></i></button>
+                        </span>
+                        </div>
                     </div>
                 </div>
                 <div class="row container-right">
-                    <h5 class="text-muted text-center label-right">WISHLIST</h5>
+                    <h5 class="text-muted text-center label-right follow">WISHLIST</h5>
+                    <!--Wishlist widget-->
                     <div class="container-fluid">
                         <div class="carousel slide" id="wishlist" data-ride="carousel">
                             <div class="carousel-inner">
@@ -341,66 +383,116 @@
                     </div>
                 </div>
                 <!-- end of row -->
+                <!--Favorites widget-->
                 <div class='row container-right'>
-                    <h5 class='label-right text-muted'>FAVORITES</h5>
-                    <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/nordstrom-logo.jpeg" class="img-responsive " alt="">
-                    <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/gap-logo.jpg" alt="" class="img-responsive">
-                    <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/kate-spade-logo.png" alt="" class="img-responsive">
-                    <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/j.crew-logo.jpg" alt="" class="img-responsive">
-                    <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/asos-logo.jpg" alt="" class="img-responsive">
-                    <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/sephora-logo.jpg" alt="" class="img-responsive">
+                    <h5 class='label-right text-muted follow'>FAVORITES</h5>
+                    <a href="#"><img src="http://kandjdiaries.com/wp-content/uploads/2014/09/nordstrom-logo.jpeg" class="img-responsive " alt=""></a>
+                    <a href="#"></a><img src="http://kandjdiaries.com/wp-content/uploads/2014/09/gap-logo.jpg" alt="" class="img-responsive"></a>
+                    <a href="#"><img src="http://kandjdiaries.com/wp-content/uploads/2014/09/kate-spade-logo.png" alt="" class="img-responsive"></a>
+                    <a href="#"><img src="http://kandjdiaries.com/wp-content/uploads/2014/09/j.crew-logo.jpg" alt="" class="img-responsive"></a>
+                    <a href="#"><img src="http://kandjdiaries.com/wp-content/uploads/2014/09/asos-logo.jpg" alt="" class="img-responsive"></a>
+                    <a href="#"><img src="http://kandjdiaries.com/wp-content/uploads/2014/09/sephora-logo.jpg" alt="" class="img-responsive"></a>
                 </div>
                 <!-- end of row -->
                 <div class="row archives">
-                    <select name="" id="" class='form-control selectpickers'>
-                        <option value="">Archives</option>
-                        <option value="">January 2017</option>
-                        <option value="">October 2016</option>
-                        <option value="">September 2016</option>
-                        <option value="">July 2016</option>
-                        <option value="">June 2016</option>
-                        <option value="">May 2016</option>
-                        <option value="">April 2016</option>
-                        <option value="">March 2016</option>
-                        <option value="">February 2016</option>
-                        <option value="">December 2015</option>
-                    </select>
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <select name="" id="" class='form-control selectpickers'>
+                            <option value="">Archives</option>
+                            <option value="">January 2017</option>
+                            <option value="">October 2016</option>
+                            <option value="">September 2016</option>
+                            <option value="">July 2016</option>
+                            <option value="">June 2016</option>
+                            <option value="">May 2016</option>
+                            <option value="">April 2016</option>
+                            <option value="">March 2016</option>
+                            <option value="">February 2016</option>
+                            <option value="">December 2015</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <br>
     <footer>
         <div class="row">
-            <h5 class="text-center">K&J INSTAGRAM</h5>
+            <h4 class="text-center">K&J INSTAGRAM</h4>
         </div>
+        <br>
         <div class="container-fluid">
-            <div class="row">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/16123026_1866538190285137_7977112526309556224_n.jpg?ig_cache_key=MTQzMzc3MDgxMDExMTY4MDk3NQ%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/14590924_315939385469228_1422823979701239808_n.jpg?ig_cache_key=MTQzMzA0NDUxNTM3OTY3OTcxOQ%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/16110720_1098494896925697_3248755134330568704_n.jpg?ig_cache_key=MTQzMTI0Njk2MjcwNzc3NjUzMg%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15875637_707016566139139_455093708186976256_n.jpg?ig_cache_key=MTQzMDg5MjExNDAxMTM2NjQyOQ%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15875847_366469387050557_5254335266188951552_n.jpg?ig_cache_key=MTQzMDA4MjYyMjU0MTYzOTUxOQ%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15802918_639282386244055_4117218004280803328_n.jpg?ig_cache_key=MTQyNjQ5NTg1ODE0MTAxMTIxNQ%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/16122960_1792243824372127_2958037469603299328_n.jpg?ig_cache_key=MTQyOTE1NDU0MDYyNDM1NDkyNA%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15876513_402359283441532_3916619654050611200_n.jpg?ig_cache_key=MTQyODA3MTUxNjMxMDcwOTkzNg%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/14482269_1870325393212702_8609118252406145024_n.jpg?ig_cache_key=MTQyNjE5NDMyOTkxMTU1NTQ2OA%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/e15/p320x320/15802583_1833614283521938_5082960410311655424_n.jpg?ig_cache_key=MTQyMTE3ODE3NDc0MjQyODUxNg%3D%3D.2" alt="" class="footer-image">
-            </div>
             <div class='row'>
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/15802299_358987451140235_8954419110310051840_n.jpg?ig_cache_key=MTQxODYyMjAxNzMxMzk4MjU1MA%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/15624583_145594322595952_3323166860072976384_n.jpg?ig_cache_key=MTQxNzg2NTgzMjEwMTIxMDIxOQ%3D%3D.2" alt="" class="footer-image">
-                <img src="https://scontent.cdninstagram.com/t51.2885-15/e15/p320x320/15802583_1833614283521938_5082960410311655424_n.jpg?ig_cache_key=MTQyMTE3ODE3NDc0MjQyODUxNg%3D%3D.2" alt="" class="footer-image">
-                <img src="" alt="" class="footer-image">
-                <img src="" alt="" class="footer-image">
-                <img src="" alt="" class="footer-image">
-                <img src="" alt="" class="footer-image">
-                <img src="" alt="" class="footer-image">
-                <img src="" alt="" class="footer-image">
-                <img src="" alt="" class="footer-image">
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/16123026_1866538190285137_7977112526309556224_n.jpg?ig_cache_key=MTQzMzc3MDgxMDExMTY4MDk3NQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/14590924_315939385469228_1422823979701239808_n.jpg?ig_cache_key=MTQzMzA0NDUxNTM3OTY3OTcxOQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/16110720_1098494896925697_3248755134330568704_n.jpg?ig_cache_key=MTQzMTI0Njk2MjcwNzc3NjUzMg%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15875637_707016566139139_455093708186976256_n.jpg?ig_cache_key=MTQzMDg5MjExNDAxMTM2NjQyOQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15875847_366469387050557_5254335266188951552_n.jpg?ig_cache_key=MTQzMDA4MjYyMjU0MTYzOTUxOQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/16122960_1792243824372127_2958037469603299328_n.jpg?ig_cache_key=MTQyOTE1NDU0MDYyNDM1NDkyNA%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15877002_244411082651890_8235937778236391424_n.jpg?ig_cache_key=MTQyODM4MjcyNzE0MTI4NTA1NQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15876513_402359283441532_3916619654050611200_n.jpg?ig_cache_key=MTQyODA3MTUxNjMxMDcwOTkzNg%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15802918_639282386244055_4117218004280803328_n.jpg?ig_cache_key=MTQyNjQ5NTg1ODE0MTAxMTIxNQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class='photo-container'>
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/14482269_1870325393212702_8609118252406145024_n.jpg?ig_cache_key=MTQyNjE5NDMyOTkxMTU1NTQ2OA%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e15/p320x320/15802583_1833614283521938_5082960410311655424_n.jpg?ig_cache_key=MTQyMTE3ODE3NDc0MjQyODUxNg%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/15802299_358987451140235_8954419110310051840_n.jpg?ig_cache_key=MTQxODYyMjAxNzMxMzk4MjU1MA%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/15624583_145594322595952_3323166860072976384_n.jpg?ig_cache_key=MTQxNzg2NTgzMjEwMTIxMDIxOQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/15258780_1641675546126138_6948705370609025024_n.jpg?ig_cache_key=MTQxNjQwMTQ4MDk2MTAyNTYxMQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/15538118_343811819339564_85037852789833728_n.jpg?ig_cache_key=MTQxMjg0MjU1NzM2ODcwMDYyNw%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/14561954_129555607533445_3595454240312524800_n.jpg?ig_cache_key=MTQwMzgzNjMyNDkwMTE0NjQ4OA%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/15337088_701648139993508_2109549195466637312_n.jpg?ig_cache_key=MTQwMzE5NjMxNzk3NDgwMDQ0MQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15251791_1997536020473138_4601003266531131392_n.jpg?ig_cache_key=MTM5NjE2NDkxMTk1NjM1MDA3Nw%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/15258787_1151571894962243_1066390059759960064_n.jpg?ig_cache_key=MTM5MjQyNDIyNDI5MTE0NjUxMw%3D%3D.2" class="img-responsive" alt="">
+                </div>
+                <div class="photo-container">
+                    <img src="https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/11385133_229874050774790_5067987308209242112_n.jpg?ig_cache_key=MTM5MTYwNjc1MzI5MjI3MDA0NQ%3D%3D.2" class="img-responsive" alt="">
+                </div>
             </div>
         </div>
     </footer>
+    <div class="container-fluid blank_space">
+
+    </div>
+    <div class='created container-fluid'>
+        <p class="property_text text-left">Created and resigned by <a href="#" class="property_text">Daniel Pak</a></p>
+        <p class='property_text right'>© Daniel Pak 2017. All Rights Reserved</p>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
