@@ -175,8 +175,8 @@ a:hover {
 }
 
 .photo-container { 
-    width: 9.7%;
-    height: 144px; 
+    width: 9.7vw;
+    height: 9.7vw; 
     display: inline-flex;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
@@ -197,6 +197,14 @@ a:hover {
     color: white;
     font-size: .9em;
     justify-content: center;
+}
+
+.wishlist-carousel { 
+    height: 441px !important;
+}
+
+.carousel-inner { 
+    height: 400px !important;
 }
 
 .property_text.right { 

@@ -1,65 +1,98 @@
-@media (max-width: 1100px) { 
-    .label-right { 
+@media (max-width: 1250px) {
+    .wishlist-carousel {
+        height: 350px !important;
+    }
+    .carousel-inner {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .label-right {
         margin-left: 40%;
     }
-    .container-right { 
+    .container-right {
         margin-left: 0px;
     }
 }
 
-@media (max-width: 991px) { 
-    .label-right { 
-        margin-left: 30%;
+@media (max-width: 1083px) {
+    .photo-container {
+        width: 9.5vw;
+        height: 9.5vw;
     }
-    .search_bar { 
-        display: none;
-    }
-    
 }
 
-@media (max-width: 700px) { 
-    .label-right { 
+@media (max-width: 1055px) {
+    .label-right {
+        margin-left: 30%;
+    }
+    .search_bar {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .wishlist-carousel {
+        height: 441px !important;
+    }
+    .carousel-inner {
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .wishlist-carousel {
+        height: 650px !important;
+    }
+    .carousel-inner {
+        height: 600px !important;
+    }
+    .label-right {
+        margin-left: 45%;
+    }
+}
+
+@media (max-width: 700px) {
+    .label-right {
         margin-left: 37%;
     }
     .nav_options {
-        display:none;
+        display: none;
     }
 }
 
-@media (max-width: 1083px) { 
-    .photo-container { 
-        width: 9%;
-        height: 108px;
+@media (max-width: 640px) {
+    .photo-container {
+        width: 24vw;
+        height: 24vw;
     }
-}
-
-@media (max-width: 640px) { 
-    .photo-container { 
-        width: 24%;
-        height: 158px;
-    }
-    .img-responsive { 
+    .img-responsive {
         width: 100%;
     }
 }
 
-@media (max-width: 480px) { 
-    .photo-container { 
-        width: 100%;
-        height: 400px;
-
+@media (max-width: 480px) {
+    .photo-container {
+        width: 100vw;
+        height: 100vw;
     }
-    .img-responsive { 
+    .img-responsive {
         width: 100%;
+    }
+    .wishlist-carousel {
+        height: 550px !important;
+    }
+    .carousel-inner {
+        height: 500px !important;
     }
 }
 
-@media (max-width: 450px) { 
-    .property-text { 
+@media (max-width: 450px) {
+    .property-text {
         display: block;
     }
-    .property_text.right { 
-        float:left;
+    .property_text.right {
+        float: left;
     }
 }
-

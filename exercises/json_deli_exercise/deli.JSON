@@ -1,0 +1,27 @@
+{
+	"appetizers": {
+		"name": "chicken fingers",
+		"ingredients": ["Breading", "Chicken Breast", "Egg"],
+		"description": "flaky crusted chicken breast, cooked to golden perfection! Perfect with our homemade honey mustard or buffalo sauce!"
+	},
+	"cold sandwiches": {
+		"name": "Turkey Club",
+		"ingredients": ["Turkey Breast", "Tomato", "Lettuce", "Honey Wheat Bread", "Mayo", "Salt", "Pepper"],
+		"description": "Wonderfully put together sandwich made with fresh Turkey Breast and freshly sliced vegetable ingredients, on a mayo spreaded bread slice and topped with salt pepper and our homemade special sauce"
+	},
+	"hot sandwiches": {
+		"name": "Hot Pastrami Sandwich",
+		"ingredients": ["Coleslaw", "Freshly grilled Pastrami", "Italian Roll"],
+		"description": "Fresh pastrami sandwich with flatbed stove grilled pastrami with coleslaw spread on top all on an italian roll"
+	},
+	"desserts": {
+		"name": "Hot fudge Sundae",
+		"ingredients": ["Vanilla Ice Cream", "Cherry", "Hot Fudge", "Sprinkles"],
+		"description": "Homemade vanilla ice cream topped with freshly melted fudge and topped with jimmies and cherries!"
+	},
+	"drinks": {
+		"name": "Dew Baja Blast",
+		"ingredients": ["Do the Dew"],
+		"description": "Just try it"
+	}
+}
