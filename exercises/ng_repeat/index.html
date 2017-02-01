@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Angular setup ng repeat!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="MainController">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<table class="table table-bordered table-condensed">
+					<thead>
+						<tr>
+							<th>Handle</th>
+							<th>Rank</th>
+							<th>Clan Members</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="players in player.kills">
+							<td>{{ players.handle}}</td>
+							<td>{{ players.rank}}</td>
+							<td>
+								<ul>
+									<li ng-repeat="clanMem in players.clan">{{clanMem}}</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
