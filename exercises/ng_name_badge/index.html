@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1">
+				<div class="row form-container">
+					<div class="col-xs-10 col-xs-offset-1">
+						<form action="" name="myForm" novalidate="novalidate">
+							<div class="row input-rows">
+								<div class="col-xs-6">
+									<input type="text" placeholder="First Name" name="firstName" class="form-control" ng-model="newPerson.firstName" required>
+								</div>
+								<div class="col-xs-6">
+									<input type="text" placeholder="Last Name" name="lastName" class="form-control" ng-model="newPerson.lastName" required>
+								</div>
+							</div>
+							<div class="row input-rows">
+								<div class="col-xs-6">
+									<input type="email" placeholder="Email" name="email" class="form-control" ng-model="newPerson.email" required>
+								</div>
+								<div class="col-xs-6">
+									<input type="text" placeholder="Place of Birth" name="birthPlace" class="form-control" ng-model="newPerson.birthPlace" required>
+								</div>
+							</div>
+							<div class="row input-rows">
+								<div class="col-xs-6">
+									<input type="number" placeholder="Phone" name="phone" class="form-control" ng-model="newPerson.phone" ng-minlength="10" ng-maxlength="10" required>
+								</div> 
+								<div class="col-xs-6">
+									<input type="text" placeholder="Favorite Food" name="food" class="form-control" ng-model="newPerson.food" required>
+								</div>
+							</div>
+							<div class="row input-rows commentbox">
+								<textarea name="" id="" cols="108" rows="7" placeholder="Tell us about yourself..." ng-model="newPerson.comment" required name="comment"></textarea>
+							</div>
+							<div class="row text-center btn-row">
+								<button type="button" class='btn btn-primary' ng-click="addPerson(newPerson)" ng-disabled="myForm.$invalid">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row form-container" ng-repeat="item in person">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="text-center badge_box" ng-class="">
+								<h1>HELLO</h1>
+								<h3>my name is</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1">
+								<div class="row">
+									<div class="col-xs-6 input-rows">
+										<p>Name: {{item.firstName}} {{item.lastName}}</p>
+									</div>
+									<div class="col-xs-6 input-rows">
+										<p>Phone: {{item.phone}}</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-6 input-rows">
+										<p>Place of birth: {{item.birthPlace}}</p>
+									</div>
+									<div class="col-xs-6 input-rows">
+										<p>Favorite food: {{item.food}}</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-6 input-rows">
+										<p>Email: {{item.email}}</p>
+									</div>
+								</div>
+								<div class="row more_about">
+									<p>{{item.comment}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>

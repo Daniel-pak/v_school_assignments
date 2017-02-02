@@ -1,0 +1,53 @@
+.form-container{ 
+	margin-top: 30px;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+}
+
+.input-rows { 
+	margin-top: 30px;
+}
+
+.commentbox {
+	margin-left: 1px;
+}
+
+textarea { 
+	border: 2px solid #ddd;
+}
+
+.btn-row { 
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.badge_box { 
+	padding-top: 5px;
+	margin-top: 0px;
+	height: 150px;
+	color: white;
+	border-radius: 10px;
+	background-color: grey;
+}
+
+.more_about { 
+	margin: 20px 1px 30px 1px;
+	height: 170px;
+	border: 2px solid #ddd;
+}
+
+.red { 
+	background-color: red;
+}
+
+.blue { 
+	background-color: blue;
+}
+
+.green { 
+	background-color: green;
+}
+
+.ng-valid.ng-touched { 
+	background-color: bisque;
+}
