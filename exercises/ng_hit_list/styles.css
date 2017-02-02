@@ -1,0 +1,30 @@
+.img-responsive { 
+    height: 300px !important; 
+    width: 300px !important;
+    border: 3px solid black;
+}
+
+.navigation { 
+    height: 150px;
+    background-color: pink;
+}    
+
+.navigation-text { 
+    margin-top: 50px;
+    font-size: 4em;
+    color: black;
+}
+
+.picture-container { 
+    margin-top: 10px;
+    
+}
+
+body { 
+    background-color: red;
+}
+
+p { 
+    color: white;
+    font-size: 2em;
+}

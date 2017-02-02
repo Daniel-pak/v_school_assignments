@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApplication">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hit List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+   <nav>
+       <div class="container">
+           <div class="row">
+               <div class="navigation text-center">
+                   <p class="navigation-text">Hit List</p>
+               </div>
+           </div>
+       </div>
+   </nav>
+    <div class="container picture-container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class='row' ng-repeat="image in images">
+                    <div class="col-xs-4" ng-repeat="item in image">
+                        <img src="" alt="" class="img-responsive" ng-src="{{item.image}}">
+                        <p>{{item.name}}</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
