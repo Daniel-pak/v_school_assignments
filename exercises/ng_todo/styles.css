@@ -1,0 +1,19 @@
+.navBar {
+    height: 50px;
+}
+
+.list {
+    margin-top: 20px;
+}
+
+.item_style {
+    font-size: 2em;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}

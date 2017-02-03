@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NG TO DO</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+    <nav class="container-fluid">
+        <div class="row">
+            <div class="navBar bg-primary">
+            </div>
+        </div>
+    </nav>
+    <div class="container list">
+        <div class="row">
+            <div class="col-xs-4 text-center">
+                <form action="" name="todo">
+                    <input type="text" name="item" class="form-control" placeholder="Item Name" ng-model="newItem.name" required>
+                    <input type="url" name="image URL" class="form-control" placeholder="Image URL" ng-model="newItem.url">
+                    <input type="number" name="price" class="form-control" placeholder="Price" ng-model="newItem.price">
+                    <textarea name="" id="" cols="30" rows="10" class="form-control" ng-model="newItem.description">
+                    </textarea>
+                    <button class="btn btn-warning" ng-click="submit(newItem)">SUBMIT</button>
+                </form>
+            </div>
+            <div class="col-xs-8 text-center">
+                <h1 class='bg-warning'>TO DO LIST</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row" ng-repeat="item in array track by $index">
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                       
+                                        <button class='btn btn-danger' ng-click="delete($index)"><i class="glyphicon glyphicon-trash"></i></button>
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#editModal" ng-click="edit($index)"> edit </button>
+                                        <br>
+                                        <input name="checks" type="checkbox" ng-model="item.completed">
+                                        
+                                        <div class="modal" id="editModal">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button class="close" data-dismiss="modal">Exit</button>
+                                                    <h2 class='modal-title'>Edit here</h2>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="" name="todo">
+                                                        <input type="text" name="item" class="form-control" placeholder="Item Name" ng-model="editItem.name" required>
+                                                        <input type="url" name="image URL" class="form-control" placeholder="Image URL" ng-model="editItem.url">
+                                                        <input type="number" name="price" class="form-control" placeholder="Price" ng-model="editItem.price">
+                                                        <textarea name="" id="" cols="30" rows="10" class="form-control" ng-model="editItem.description">
+                                                        </textarea>
+                                                        <button type="button" class="btn btn-warning" ng-click="submitEdit(editItem)" data-dismiss="modal">SUBMIT</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 item_style" ng-class="{'line-through': item.completed}">
+                                        <b>{{item.title}}</b> {{item.price | currency}}
+                                        <br> <i>{{item.description}}</i>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <img src="" alt="" class="img-responsive" ng-src="{{item.imgUrl}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
