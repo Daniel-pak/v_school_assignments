@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController" class="bg-warning">
+    <div class="container">
+        <div class="row">
+            <header class="head text-center">
+                <h1>UGLY THINGS</h1>
+            </header>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row inputs">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <form class="form-group text-center" name="myForm">
+                            <input type="text" class="form-control" placeholder="Name" ng-model="item.name" required>
+                            <input type="text" class="form-control" placeholder="Image URL" ng-model="item.ImgURL" required>
+                            <textarea name="" id="" cols="30" rows="10" class="form-control" ng-model="item.comment" required></textarea>
+                            <button class="btn btn-warning" ng-disabled="myForm.$invalid" ng-click="submit(item)">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-xs-4 text-center" ng-repeat="thing in array track by $index" ng-init="outerIndex = $index">
+               <h4>{{thing.name}}</h4>
+                <img ng-src="{{thing.image}}" class="img-responsive">
+<!--                <button class="btn btn-muted">remove image</button>-->
+                <br>
+                <p ng-repeat="comment in thing.comment track by $index" ng-init="innerIndex = $index">{{comment}}
+                    <button class="btn btn-danger" ng-click="deleteComment(innerIndex, outerIndex)">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </button>
+                </p>
+                <input id="empty" type="text" placeholder="add a comment..." ng-model="thing.newComment" class="form-control">
+                <br>
+                <button class="btn btn-success" type="submit" ng-click="addComment(outerIndex, thing)">Submit</button>
+                <button class="btn btn-warning" ng-click="delete(outerIndex)">Delete Post</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
