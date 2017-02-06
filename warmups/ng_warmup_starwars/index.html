@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApplication">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars_NG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 info-container">
+                <h3>
+                    {{crawl}}
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <audio id="sound" src="https://archive.org/download/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.mp3"></audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

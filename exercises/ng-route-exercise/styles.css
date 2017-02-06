@@ -1,0 +1,23 @@
+ul li {
+    display: inline-flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 2em;
+}
+
+nav h1 {
+    display: inline-block
+}
+
+body {
+    background: url("http://www.jerseyboardwalk.com/seaside8a.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about_box { 
+    background-color: white;
+}
+    

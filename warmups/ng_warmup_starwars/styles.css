@@ -1,0 +1,29 @@
+body {
+    background: url("https://i.ytimg.com/vi/voWpbz1De_M/maxresdefault.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.info-container {
+    transform-origin: 30% 80%;
+    transform: perspective(300px) rotateX(15deg);
+    position: absolute;
+    top: 100%;
+    animation: scroll 60s linear 4s infinite;
+}
+
+h3 {
+    color: yellow;
+    line-height: 5em;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
+}

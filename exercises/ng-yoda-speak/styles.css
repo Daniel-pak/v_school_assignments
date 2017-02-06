@@ -1,0 +1,17 @@
+body {
+    background: url("https://images8.alphacoders.com/407/thumb-1920-407468.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 { 
+    color: white;
+    font-size: 6em;
+}
+
+p { 
+    color: crimson;
+    font-size: 5em; 
+}

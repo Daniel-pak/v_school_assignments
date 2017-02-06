@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="routingApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NG-Route</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <div class="row">
+            <h1><i>Welcome to Jersey!</i></h1>
+            <div class='pull-right'>
+                <ul>
+                    <a href="#/home"><li>Home</li></a>
+                    <a href="#/about"><li>About</li></a>
+                    <a href="#/whyilove"><li>WhyILove</li></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class='row'>
+        <div class="col-xs-8 col-xs-offset-2" ng-view>
+            
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="about/about.js"></script>
+    <script src="whyILove/whyILove.js"></script>
+</body>
+
+</html>
