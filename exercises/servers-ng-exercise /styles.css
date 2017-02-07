@@ -1,0 +1,13 @@
+body { 
+    background: url("https://ugc.kn3.net/i/origin/http://i84.photobucket.com/albums/k40/sepsip/00-JL/poke/Gen1Starter.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 { 
+    color: white; 
+}
+
+li { 
+    font-size: 2em; 
+    color: white;
+}

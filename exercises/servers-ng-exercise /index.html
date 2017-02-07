@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myServices">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular - Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">  
+   
+    <div class="container">
+        <div class="row">
+            <h1 class='text-center'>My favorite<br/> Pokemon!</h1>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-2">
+                <form>
+                    <input type="text" placeholder="Pokemon Name" ng-model="newPokemon">
+                    <button class="btn btn-danger" ng-click="addPokemon(newPokemon)">Add me!</button>
+                    <button class="btn btn-success" ng-click="removePokemon(newPokemon)">Remove me!</button>
+                </form>
+            </div>
+            <div class="col-xs-4 col-xs-offset-2">
+                    <ul>
+                        <li ng-repeat="pokemen in pokemon">{{pokemen}}</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src='app.js'></script>
+    <script src="pokeService.js"></script>
+</body>
+
+</html>

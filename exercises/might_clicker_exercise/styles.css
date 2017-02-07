@@ -1,0 +1,19 @@
+body { 
+    background: url("http://web.nmsu.edu/~gchavez7/red_pill_blue_pill-copy3.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 { 
+    color: white;
+    font-size: 5em;
+}
+
+.red { 
+    color: red;
+    font-size: 3em;
+}
+
+.blue { 
+    color: blue;
+    font-size: 3em;
+}

@@ -1,13 +1,11 @@
 var app = angular.module("MyApplication", []);
 
-app.controller("MainController", ["$scope", "$http", function ($scope, $http) {
+app.controller("MainController", ["$scope", "HTTPService", function ($scope, HTTPService) {
 
-    $scope.images = [];
-
-    $http.get("http://api.vschool.io:6543/hitlist.json")
-        .then(function (response) {
-            $scope.images.push((response.data));
-            console.log(response.data);
-        });
+    
+    HTTPService.getImages().then(function(response) { 
+        console.log(response.data)
+        $scope.images = response.data;
+    })
     
 }]);

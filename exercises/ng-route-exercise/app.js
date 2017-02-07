@@ -14,5 +14,4 @@ angular.module("routingApp", ['ngRoute'])
             controller: "LoveController",
             templateUrl: "whyILove/whyILove.html"
         })
-
 })

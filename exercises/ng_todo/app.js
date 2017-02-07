@@ -1,12 +1,11 @@
 var app = angular.module("MyApp", []);
 
-app.controller("MainController", function ($scope, $http) {
+app.controller("MainController", ["$scope", "HTTPService", function ($scope, HTTPService) {
 
     //LOAD TO-DO LIST ON REFRESH
-    $http.get("http://api.vschool.io/danielpak/todo")
-        .then(function (object) {
-            $scope.array = object.data;
-        });
+    HTTPService.getToDo().then(function (object) {
+        $scope.array = object.data;
+    });
 
     //SUBMIT A NEW ITEM
     $scope.submit = function (item) {
@@ -18,10 +17,10 @@ app.controller("MainController", function ($scope, $http) {
             completed: false
         };
 
-        $http.post("http://api.vschool.io/danielpak/todo", newItem)
-            .then(function (response) {
-                $scope.array.push(response.data);
-            })
+
+        HTTPService.submit(newItem).then(function (response) {
+            $scope.array.push(response.data);
+        })
 
         $scope.newItem = {};
     };
@@ -30,14 +29,12 @@ app.controller("MainController", function ($scope, $http) {
     //DELETE FUNCTION 
     $scope.delete = function (index) {
         var id = ($scope.array[index]._id)
-        $http.delete("http://api.vschool.io/danielpak/todo/" + id)
-            .then(function (response) {
-                console.log(response.data.msg);
-                $http.get("http://api.vschool.io/danielpak/todo/")
-                    .then(function (object) {
-                        $scope.array = object.data;
-                    });
-            })
+        HTTPService.delete(id).then(function (response) {
+            console.log(response.data.msg);
+            HTTPService.getToDo().then(function (object) {
+                $scope.array = object.data;
+            });
+        })
     };
 
     var id;
@@ -60,19 +57,11 @@ app.controller("MainController", function ($scope, $http) {
             completed: false
         };
 
-        $http.put("http://api.vschool.io/danielpak/todo/" + id, newItem)
-            .then(function () {
-                $http.get("http://api.vschool.io/danielpak/todo")
-                    .then(function (object) {
-                        $scope.array = object.data;
-                    })
+        HTTPService.edit(id, newItem).then(function () {
+            HTTPService.getToDo().then(function (object) {
+                $scope.array = object.data;
             })
+        })
     }
 
-
-
-    //if value of checked is true - set put request to change the value of compeleted to true; 
-    //if value of checked is false - set put request to change the value of compelted to false;
-
-
-});
+}]);
