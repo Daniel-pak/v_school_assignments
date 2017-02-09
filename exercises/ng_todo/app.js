@@ -57,7 +57,7 @@ app.controller("MainController", ["$scope", "HTTPService", function ($scope, HTT
             completed: false
         };
 
-        HTTPService.edit(id, newItem).then(function () {
+        HTTPService.edit(id, newItem).then(function (object) {
             HTTPService.getToDo().then(function (object) {
                 $scope.array = object.data;
             })

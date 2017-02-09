@@ -1,0 +1,17 @@
+body { 
+    background: url("http://www.geracaogeek.com.br/wp-content/uploads/2013/07/cartoon_network_wallpaper_attempt_by_randyadr-d56sviy.jpg") no-repeat center center fixed; 
+    background-size: cover;
+}
+
+h1, label { 
+    color: azure;
+    
+}
+
+.characters { 
+    background-color: grey; 
+}
+
+.inline { 
+    display: inline-block;
+}

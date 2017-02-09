@@ -2,7 +2,6 @@ angular.module("myClicker", [])
 
 .controller("MainController", ["$scope", "RedService", "BlueService", function ($scope, RedService, BlueService) {
     
-    
     $scope.redPoints = RedService.point;
 
     $scope.redIncrement = function () {

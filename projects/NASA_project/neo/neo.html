@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="text-center white">Near Earth Objects</h1>
+    <div class="col-xs-12">
+        <table class='table table-bordered'>
+            <thead>
+                <th>Object Name</th>
+                <th>Object Velocity</th>
+                <th>Diameter</th>
+                <th>Miss Distance</th>
+                <th>Potentially Dangerous?</th>
+                <th>More Information</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="object in neo">
+                    <td>{{object.name}}</td>
+                    <td>{{object.close_approach_data[0].relative_velocity.miles_per_hour}} mph</td>
+                    <td>{{object.estimated_diameter.feet.estimated_diameter_max}} ft</td>
+                    <td>{{object.close_approach_data[0].miss_distance.miles}} miles</td>
+                    <td>{{object.is_potentially_hazardous_asteroid}}</td>
+                    <td><a href="{{object.nasa_jpl_url}}">{{object.nasa_jpl_url}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

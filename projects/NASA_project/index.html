@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NASAApplication">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exploration Space</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2">
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6 text-center navbarlinks">
+                            <a id="daily" href="#/daily">Daily Blurb</a>
+                            <a id="neo" href="#/neo">NEO</a>
+                            <a id="earth" href="#/earth">Earth</a>
+                            <a id="mars" href="#/mars">Mars</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <h1 class="navbar-text pull-right">Exploration - Space</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container" ng-view>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+    
+    <script src="app.js"></script>
+    <script src="daily/daily.js"></script>
+    <script src="neo/neo.js"></script>
+    <script src="earth/earth.js"></script>
+    <script src="services/services.js"></script>
+</body>
+
+</html>
