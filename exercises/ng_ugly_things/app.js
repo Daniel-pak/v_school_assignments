@@ -18,9 +18,9 @@ app.controller("MainController", ["$scope", function ($scope) {
         $scope.item = {};
     }
 
-    $scope.addComment = function (index, thing) {
+    $scope.addComment = function (thing) {
 
-        $scope.array[index].comment.push(thing.newComment);
+        thing.comment.push(thing.newComment);
         
         delete thing.newComment;
 

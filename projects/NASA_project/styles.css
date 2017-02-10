@@ -1,34 +1,38 @@
 body {
-    background: url(https://source.unsplash.com/user/nasa) no-repeat center center fixed;
+    background: url(content/nue8nu3otjo-nasa.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-.container { 
+
+.container {
     width: 98%;
 }
 
-
-.image { 
+.image {
     height: 80px;
     width: 140px;
     opacity: .9;
     left: 0px;
 }
 
-nav h1 { 
+h1, h2 {
+    font-family: 'Arimo', sans-serif;
+}
+
+nav h1 {
     font-family: 'Cinzel Decorative', cursive;
     font-weight: 900;
     color: white;
 }
 
-.navbarlinks { 
+.navbarlinks {
     margin-top: 15px;
     font-size: 1.5em;
 }
 
-.navbarlinks a { 
+.navbarlinks a {
     margin-left: 50px;
     color: white;
     display: inline-block;
@@ -36,33 +40,47 @@ nav h1 {
     font-family: 'Exo', sans-serif;
 }
 
-#daily:hover { 
+#daily:hover {
     color: chartreuse;
 }
 
-#neo:hover { 
+#neo:hover {
     color: fuchsia;
 }
 
-#earth:hover { 
-    color:darkorange;
+#earth:hover {
+    color: darkorange;
 }
 
-#mars:hover { 
+#mars:hover {
     color: darkturquoise;
 }
 
-
-.white { 
+.white {
     color: white;
     background-color: grey;
     opacity: .8;
 }
 
-.border { 
+.border {
     border: 1px solid white;
 }
 
-.table { 
+.table {
     background-color: white;
+}
+
+h2 {
+    color: firebrick;
+}
+
+.image {
+    border: 1px white solid;
+    height: 8vw;
+    width: 8vw;
+}
+
+p {
+    font-family: 'Arimo', sans-serif;
+    line-height: 1.5em;
 }

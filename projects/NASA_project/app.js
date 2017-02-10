@@ -14,4 +14,11 @@ angular.module("NASAApplication", ['ngRoute', 'geolocation'])
             controller: "EarthController",
             templateUrl: "earth/earth.html"
         })
+        .when('/mars', { 
+            controller: "MarsController", 
+            templateUrl: "mars/mars.html"
+        })
+        .otherwise({
+            redirectTo: "/daily"
+        })
 })

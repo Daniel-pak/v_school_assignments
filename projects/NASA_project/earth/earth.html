@@ -1,8 +1,13 @@
 <div class="row white">
-    <h1 class='text-center'>The View From Space</h1>
+    <h1 class='text-center'>The View From A Space Satellite</h1>
 </div>
 <div class="row">
-    <div class="col-xs-8 col-xs-offset-2 text-center">
-        <img ng-src="{{earthPhoto.url}}" alt="">
+    <div class="col-xs-6 text-center">
+        <h2>Your Location</h2>
+        <img ng-src="{{earthPhoto[0].url}}" alt="">
+    </div>
+      <div class="col-xs-6 text-center">
+        <h2>New York</h2>
+        <img ng-src="{{earthPhoto[1].url}}" alt="">
     </div>
 </div>
