@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="DirectivesApp">
+
 <head>
     <meta charset="UTF-8">
     <title>Directive Exercise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <nav class='container'>
+        <h1>My Tech Wishlist</h1>
+        <a href="#/main">Main Tech Wants</a>
+        <a href="#/secondary">Secondary Tech Wants</a>
+    </nav>
+    <div class="container">
+       
+        <ng-view></ng-view>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="route-folders/mainTech/mainTech.js"></script>
+    <script src="route-folders/secondaryTech/secondaryTech.js"></script>
+
+    <script src="directives/wishListDirectives.js"></script>
+
 </body>
+
 </html>

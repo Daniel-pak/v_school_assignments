@@ -1,0 +1,25 @@
+body { 
+    background: url("xjb7du_4kqq-andrew-neel.jpg") no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.white {
+    background-color: grey; 
+    color: white; 
+    opacity: .9;
+}
+
+h1 { 
+    color: white; 
+    font-size: 3em; 
+}
+
+nav { 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a { 
+    color: white; 
+    text-decoration: none;
+}
