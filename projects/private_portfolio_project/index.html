@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyPortfolioApplication">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <nav class='container'>
+        <a href="#/home">La</a>
+        <a href="#/portfolio">De</a>
+        <a href="#/contact">Da</a>
+    </nav>
+    <ng-view></ng-view>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+
+    <script src="app.js"></script>
+    <!-- controllers -->
+    <script src="home/home.js"></script>
+    <script src="portfolio/portfolio.js"></script>
+    <script src="contact/contact.js"></script>
+</body>
+
+</html>
