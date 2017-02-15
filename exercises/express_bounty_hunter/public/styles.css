@@ -1,0 +1,24 @@
+* { 
+    color: white !important; 
+    font-family: 'Fjalla One', sans-serif !important;
+
+}
+
+body { 
+    background: url("_4ib-a8g9aa-teddy-kelley.jpg") no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.form { 
+    background-color: grey;
+    padding: 10px 10px 10px 10px;
+}
+
+.new_wanted { 
+    border: 2px solid white; 
+    
+} 
+
+input { 
+    color: black !important;
+}

@@ -1,4 +1,4 @@
-angular.module("MyPortfolioApplication", ["ngRoute"])
+angular.module("MyPortfolioApplication", ["ngRoute", "ui.bootstrap"])
 
 .config(["$routeProvider", function ($routeProvider) {
     $routeProvider
@@ -7,11 +7,22 @@ angular.module("MyPortfolioApplication", ["ngRoute"])
             templateUrl: "home/home.html"
         })
         .when("/portfolio", {
-            controller: "PortfolioController", 
+            controller: "PortfolioController",
             templateUrl: "portfolio/portfolio.html"
         })
-        .when("/contact", { 
-            controller: "ContactController", 
+        .when("/contact", {
+            controller: "ContactController",
             templateUrl: "contact/contact.html"
+        })
+        .when("/about", {
+            controller: "AboutController",
+            templateUrl: "about/about.html"
+        })
+        .when("/skills", {
+            controller: "SkillsController",
+            templateUrl: "skills/skills.html"
+        })
+        .otherwise({
+            redirectTo: "/home"
         })
 }])

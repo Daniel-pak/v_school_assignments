@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bounty Hunter - CRUD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+
+
+
+<body ng-controller="MainController">
+    <h1 class="text-center">Galaxies Most Wanted</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-5">
+                <div class="row form">
+                    <h2>Add Here</h2>
+                    <form name="myForm">
+                        <input type="text" class="form-control" placeholder="First Name" ng-model="newBounty.firstName">
+                        <input type="text" class="form-control" placeholder="Last Name" ng-model="newBounty.lastName" required>
+                        <input type="number" class="form-control" placeholder="Price" ng-model="newBounty.price" required>
+                        <label for="isAlive">Alive?</label>
+                        <input id="isAlive" type="checkbox" ng-model="newBounty.isAlive" value="true">
+                        <br>
+                        <label for="type">Type:</label>
+                        <label for="">Sith</label>
+                        <input type="radio" value="Sith" ng-model="newBounty.type">
+                        <label for="">Jedi</label>
+                        <input type="radio" value="Jedi" ng-model="newBounty.type">
+                        <button class="btn btn-primary" ng-click="submit(newBounty)" ng-disabled="myForm.$invalid">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xs-6 col-xs-offset-1 text-center new_wanted pull-right" ng-repeat="item in list track by $index">
+                <div class="row">
+                    <div ng-show="edit">
+                        <h2>{{item.firstName}} {{item.lastName}}</h2>
+                        <h4>{{item.price}}</h4>
+                        <h6>{{item.type}}</h6>
+                        <h6>{{item.isAlive}}</h6>
+                    </div>
+                    <div ng-hide="edit">
+                        <input type="text" class="form-control" placeholder="First Name" ng-model="list[$index].firstName">
+                        <input type="text" class="form-control" placeholder="Last Name" ng-model="list[$index].lastName">
+                        <input type="number" class="form-control" placeholder="Price" ng-model="list[$index].price">
+                        <label for="isAlive">Alive?</label>
+                        <input id="isAlive" type="checkbox" ng-model="list[$index].isAlive" value="true">
+                        <br>
+                        <label for="type">Type:</label>
+                        <label for="">Sith</label>
+                        <input type="radio" ng-model="list[$index].type" value="Sith">
+                        <label for="">Jedi</label>
+                        <input type="radio" ng-model="list[$index].type" value="Jedi">
+                    </div>
+                    <button class="btn btn-danger" ng-click="delete($index)" ng-show="edit" ng-show="edit">Delete</button>
+                    <button class="btn btn-success" ng-click="editItem($index, list[$index]); edit = !edit" ng-hide="edit">Submit</button>
+                    <button class="btn btn-warning" ng-click="edit = !edit" ng-show="edit">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="ng.js"></script>
+    <script src="bountyService.js"></script>
+</body>
+
+</html>

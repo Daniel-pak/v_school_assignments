@@ -1,0 +1,32 @@
+.contact_icon { 
+    height: 50px; 
+    width: 50px; 
+    border: 1px solid grey;
+    display: inline-block;
+    border-radius: 100%;
+}
+
+.contact_links { 
+    position: relative;
+}
+
+body { 
+    background: url("photos/bpt7mjgrbrq-michal-pechardo.jpg") no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.navigation { 
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: white; 
+    opacity: .8;
+}
+
+.navigation_buttons { 
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 15px;
+}
