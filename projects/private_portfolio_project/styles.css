@@ -8,6 +8,11 @@
 
 .contact_links { 
     position: relative;
+    
+}
+
+.contact_links:hover { 
+    text-decoration: none;
 }
 
 body { 
@@ -25,7 +30,7 @@ body {
 .navigation_buttons { 
     display: inline-block;
     height: 50px;
-    width: 200px;
+    width: 150px;
     margin-left: 20px;
     margin-right: 20px;
     padding-top: 15px;
