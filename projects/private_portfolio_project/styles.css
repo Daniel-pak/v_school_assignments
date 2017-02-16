@@ -1,37 +1,76 @@
-.contact_icon { 
-    height: 50px; 
-    width: 50px; 
+.contact_icon {
+    height: 50px;
+    width: 50px;
     border: 1px solid grey;
     display: inline-block;
     border-radius: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
 }
 
-.contact_links { 
+.contact_icon:hover {
+    background-color: white;
+}
+
+.contact_links {
     position: relative;
-    
+    font-size: 1.3em;
 }
 
-.contact_links:hover { 
+.contact_links:hover {
     text-decoration: none;
 }
 
-body { 
-    background: url("photos/bpt7mjgrbrq-michal-pechardo.jpg") no-repeat center center fixed; 
+body {
+    background: url("photos/bpt7mjgrbrq-michal-pechardo.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
-.navigation { 
+.navigation {
     padding-top: 15px;
     padding-bottom: 20px;
-    background-color: white; 
+    background-color: white;
     opacity: .8;
+    height: 100px;
 }
 
-.navigation_buttons { 
+.navigation_buttons {
     display: inline-block;
     height: 50px;
     width: 150px;
     margin-left: 20px;
     margin-right: 20px;
     padding-top: 15px;
+    border: 1px white solid;
+}
+
+.navigation_buttons:hover {
+    border: 1px red solid;
+    padding-top: 15px;
+}
+
+* {
+    font-family: 'Arvo', serif;
+}
+
+i.fa {
+    font-size: 2em !important;
+    transition: transform .8s ease-in-out;
+}
+
+i.fa:hover {
+    transform: rotate(720deg);
+}
+
+i.fa-twitter:hover {
+    color: #4099FF;
+}
+
+i.fa-linkedin-square:hover { 
+    color: #0E76A8;
+}
+
+.home { 
+    margin-top: 100px;
 }
