@@ -1,7 +1,7 @@
 angular.module("MyPortfolioApplication")
 
-.controller("AboutController", [function() { 
+.controller("AboutController", ["$scope", function($scope) { 
 
-    
+    $scope.pageClass = "page-about"
     
 }])

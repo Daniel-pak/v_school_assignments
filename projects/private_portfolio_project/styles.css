@@ -1,3 +1,100 @@
+.page {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 100%;
+    z-index: 0;
+}
+
+
+/*NG Animate*/
+
+@keyframes slideLeftOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideRightOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* home -------------------------- */
+
+.page-home.ng-enter {
+    animation: fadeIn 1s both ease;
+}
+
+.page-home.ng-leave {
+    animation: slideLeftOut 0.5s both ease;
+}
+
+
+/* about ------------------------ */
+
+.page-about.ng-leave {
+    animation: slideRightOut 1s both ease;
+}
+
+.page-about.ng-enter {
+    animation: fadeIn 0.5s both ease;
+}
+
+
+/* contact ---------------------- */
+
+.page-contact.ng-leave {
+    animation: slideLeftOut 1s both ease;
+}
+
+.page-contact.ng-enter {
+    animation: fadeIn 0.5s both ease;
+}
+
+
+/* about ------------------------ */
+
+.page-portfolio.ng-leave {
+    animation: slideLeftOut 1s both ease;
+}
+
+.page-portfolio.ng-enter {
+    animation: fadeIn 0.5s both ease;
+}
+
+
+/* contact ---------------------- */
+
+.page-skills.ng-leave {
+    animation: slideRightOut 0.5s both ease;
+}
+
+.page-skills.ng-enter {
+    animation: fadeIn 1s both ease;
+}
+
+
+/*Regular CSS*/
+
 .contact_icon {
     height: 50px;
     width: 50px;
@@ -33,6 +130,7 @@ body {
     background-color: white;
     opacity: .8;
     height: 100px;
+    z-index: 1;
 }
 
 .navigation_buttons {
@@ -43,6 +141,7 @@ body {
     margin-right: 20px;
     padding-top: 15px;
     border: 1px white solid;
+    color: grey;
 }
 
 .navigation_buttons:hover {
@@ -54,12 +153,12 @@ body {
     font-family: 'Arvo', serif;
 }
 
-i.fa {
+i.home_icons {
     font-size: 2em !important;
     transition: transform .8s ease-in-out;
 }
 
-i.fa:hover {
+i.home_icons:hover {
     transform: rotate(720deg);
 }
 
@@ -67,10 +166,24 @@ i.fa-twitter:hover {
     color: #4099FF;
 }
 
-i.fa-linkedin-square:hover { 
+i.fa-linkedin-square:hover {
     color: #0E76A8;
 }
 
-.home { 
+.home {
     margin-top: 100px;
+}
+
+.skills_icon {
+    font-size: 20em
+}
+
+.language_icon {
+    transition: transform 0.5s ease;
+}
+
+.language_icon:hover {
+    transform: rotateY(360deg);
+    background-color: aliceblue;
+    opacity: .9;
 }

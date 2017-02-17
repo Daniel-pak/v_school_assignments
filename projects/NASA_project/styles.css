@@ -84,3 +84,17 @@ p {
     font-family: 'Arimo', sans-serif;
     line-height: 1.5em;
 }
+
+@media (max-width: 550px) { 
+    .navbar-text{ 
+        margin-left: 100px;
+    }
+    .image { 
+        width: 98vw;
+        height: auto;
+    }
+    .table { 
+        width: 300px !important; 
+        height: auto;
+    }
+}

@@ -1,0 +1,18 @@
+body { 
+    background: url(1uy8uuukids-elliott-stallion.jpg) no-repeat center center fixed; 
+    background-size: cover; 
+}
+
+.navigation_bar { 
+    background-color: grey; 
+    color: white; 
+}
+
+h1 { 
+    display: inline-block;
+}
+
+.topic { 
+    background-color: beige;
+    
+}

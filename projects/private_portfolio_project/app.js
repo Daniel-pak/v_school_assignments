@@ -1,4 +1,4 @@
-angular.module("MyPortfolioApplication", ["ngRoute", "ui.bootstrap"])
+angular.module("MyPortfolioApplication", ["ngRoute", 'ngAnimate', "ui.bootstrap"])
 
 .config(["$routeProvider", function ($routeProvider) {
     $routeProvider

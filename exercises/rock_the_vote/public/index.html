@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock the Vote!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+    <nav class="container-fluid navigation_bar">
+        <h1>Expression</h1>
+        <h4 class="pull-right">Speak your mind about today's hot political topics!</h4>
+        <br>
+        <button class="btn btn-default pull-right" ng-click="add = !add">Submit a new topic!</button>
+    </nav>
+    <div class="container-fluid" ng-hide="!add">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-6">
+                <form>
+                    <input type="text" class="form-control" placeholder="title" ng-model="newTopic.title">
+                    <input type="text" class="form-control" placeholder="short description" ng-model="newTopic.description">
+                    <input type="text" class="form-control" placeholder="comment" ng-model="newTopic.comment">
+                    <button class="btn btn-warning" ng-click="addTopic(newTopic); add = !add">Submit!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 topic" ng-repeat="topics in arrayOfTopics | orderBy: '-upvote' track by $index ">
+                <div>
+                    <h2>{{topics.title}}</h2>
+                    <p>{{topics.description}}</p>
+                    <h5>Total Votes: {{topics.upvote}}</h5>
+                    <ul>
+                        <li ng-repeat="comment in topics.comments">{{comment}}</li>
+                    </ul>
+                    <button class="btn btn-success" ng-click="addVote($index)"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+                    <button class="btn btn-danger" ng-click="takeVote($index)"><i class="glyphicon glyphicon-thumbs-down"> </i></button>
+                </div>
+                <button class="btn btn-warning" ng-click="comment = !comment">Add a comment!</button>
+                <div class="container" ng-hide="!comment">
+                    <textarea name="" id="" cols="30" rows="10" ng-model="newComment">
+                    </textarea>
+                    <br>
+                    <button class="btn btn-success text-center" ng-click="submitComment(newComment, $index)">Submit Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="service.js"></script>
+    <script src="directive/directive.js"></script>
+</body>
+
+</html>
