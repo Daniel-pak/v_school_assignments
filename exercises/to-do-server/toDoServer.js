@@ -6,8 +6,7 @@ var todoRouter = require("./router");
 
 app.use(bodyParser.json());
 
-app.use("/todos", todoRoute
-        r);
+app.use("/todos", todoRouter);
 
 app.listen(9000, function () {
 
