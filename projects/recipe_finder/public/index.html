@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="RecipeApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Foodie</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="container-fluid navbar navbar-fixed-top">
+        <div class="row">
+            <div class="col-sm-4">
+                <h1 class='pull-left'><span class="title_font">Foodie</span></h1>
+            </div>
+            <div class="col-sm-4">
+                <form>
+                    <input type="text" placeholder="Search" class="form-control search_bar">
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <ul class="pull-right">
+                    <li class="nav-options"><a href="#/home">My Home</a></li>
+                    <li class="nav-options"><a href="#/topRated">Hot Today</a></li>
+                    <li class="nav-options"><a href="#/myRecipes">My Recipes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ng-view></ng-view>
+
+   
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    
+    <!-- Route --> 
+    <script src="app.js"></script>
+    
+    <!-- services & controllers --> 
+    <script src="components/home/home.js"></script>
+    <script src="components/services/getFood.js"></script>
+    <script src="components/topRated/topRated.js"></script>
+    
+</body>
+
+</html>
