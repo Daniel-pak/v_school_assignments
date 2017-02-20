@@ -6,6 +6,8 @@
     <title>Foodie</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,12 +20,16 @@
             </div>
             <div class="col-sm-4">
                 <form>
-                    <input type="text" placeholder="Search" class="form-control search_bar">
+                    <div class="has-feedback has-feedback-right">
+                        <input type="text" placeholder="Search by ingredient or keyword here..." class="form-control search_bar">
+                        <i class='form-control-feedback glyphicon glyphicon-search'></i>
+<!--                        <button type="button" style="visibility: hidden"></button>-->
+                    </div>
                 </form>
             </div>
             <div class="col-sm-4">
                 <ul class="pull-right">
-                    <li class="nav-options"><a href="#/home">My Home</a></li>
+                    <li class="nav-options"><a href="#/home">Home</a></li>
                     <li class="nav-options"><a href="#/topRated">Hot Today</a></li>
                     <li class="nav-options"><a href="#/myRecipes">My Recipes</a></li>
                 </ul>
@@ -33,20 +39,22 @@
 
     <ng-view></ng-view>
 
-   
-    
-    
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
-    
-    <!-- Route --> 
+
+    <!-- Route -->
     <script src="app.js"></script>
-    
-    <!-- services & controllers --> 
-    <script src="components/home/home.js"></script>
+
+    <!-- services & controllers -->
     <script src="components/services/getFood.js"></script>
+    <script src="components/services/transferFood.js"></script>
+    <script src="components/home/home.js"></script>
+
     <script src="components/topRated/topRated.js"></script>
-    
+    <script src="components/thisRecipe/thisRecipe.js"></script>
 </body>
 
 </html>

@@ -5,8 +5,9 @@ angular.module("RecipeApp")
     var recipeId = PassFood.passRID()
     
     GetFood.thisRecipe(recipeId).then(function (response) {
-        $scope.thisRecipe = response.data.recipe.publisher;
+        $scope.thisRecipe = response.data.recipe;
         console.log($scope.thisRecipe);
     })
+
 
 }])
