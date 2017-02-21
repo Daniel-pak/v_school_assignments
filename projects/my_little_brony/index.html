@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BronyCentralApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Little Brony</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="MainController">
+    <nav class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <h1>Brony Central</h1>
+            </div>
+            <div class="col-sm-6 text-center">
+                <button class="btn btn-default" ng-click="boolean = !boolean">Add</button>
+            </div>
+            <div class="col-sm-3">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/My_Little_Pony_G4_logo.svg" class="img-responsive logo_picture pull-right" alt="">
+            </div>
+        </div>
+    </nav>
+    <div class="container form_hidden" ng-hide="boolean == true">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-8 add_pony_form">
+               <h1>Submit your pony here!</h1>
+                <form action="ponyForm">
+                    <input type="text" class="form-control" placeholder="Pony Name" ng-model="newPony.name" ng-minlength="3" required>
+                    <input type="text" class="form-control" placeholder="Username" ng-model="newPony.username" required>
+                    <input type="text" class="form-control" placeholder="Image Source Url" ng-model="newPony.imgUrl" required>
+                    <button type="button" class="btn btn-warning" ng-click="submitPony(newPony)" ng-disabled="ponyForm.$validate">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="mainController.js"></script>
+    <script src="ponyService.js"></script>
+</body>
+
+</html>

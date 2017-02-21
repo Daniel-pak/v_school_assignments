@@ -1,0 +1,32 @@
+body {
+    background: url(My-Little-Pony-Wallpaper-HD.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav {
+    background-color: azure;
+    opacity: .8;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.logo_picture {
+    height: 80px !important;
+    width: 80px !important;
+}
+
+.form_hidden {
+    z-index: 1;
+    position: absolute;
+}
+
+.btn-default {
+    margin-top: 45px;
+}
+
+.add_pony_form {
+    font-family: 'Permanent Marker', cursive;
+}
+
+div.add_pony_form h1 { 
+    color: white;
+}

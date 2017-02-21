@@ -4,7 +4,6 @@ angular.module("RecipeApp")
 
     GetFood.topRatedFood()
         .then(function (response) {
-            console.log(response.data);
             $scope.hotRecipes = response.data.recipes
         })
 
@@ -13,6 +12,9 @@ angular.module("RecipeApp")
         PassFood.savingRID(recipeId);
         } 
 
+    $scope.addToFavorites = function(index) { 
+        GetFood.addRecipeToMyList($scope.hotRecipes[index]);
+    }
 
 
 }]);
