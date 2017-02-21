@@ -8,4 +8,7 @@ angular.module("BronyCentralApp", [])
         PonyService.validatePony(pony)
     }
 
-}])
+    PonyService.getMyPonies().then(function(response) { 
+       $scope.allMyPonies = response.data;
+    })
+}]) 

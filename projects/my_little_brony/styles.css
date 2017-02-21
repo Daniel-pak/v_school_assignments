@@ -30,3 +30,7 @@ nav {
 div.add_pony_form h1 { 
     color: white;
 }
+
+.pony_container { 
+    background-color: white;
+}    

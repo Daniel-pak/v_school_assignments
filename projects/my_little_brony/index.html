@@ -23,16 +23,47 @@
             </div>
         </div>
     </nav>
+<!--
+    <div class="carousel slide">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
     <div class="container form_hidden" ng-hide="boolean == true">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-8 add_pony_form">
-               <h1>Submit your pony here!</h1>
+                <h1>Submit your pony here!</h1>
                 <form action="ponyForm">
                     <input type="text" class="form-control" placeholder="Pony Name" ng-model="newPony.name" ng-minlength="3" required>
                     <input type="text" class="form-control" placeholder="Username" ng-model="newPony.username" required>
                     <input type="text" class="form-control" placeholder="Image Source Url" ng-model="newPony.imgUrl" required>
                     <button type="button" class="btn btn-warning" ng-click="submitPony(newPony)" ng-disabled="ponyForm.$validate">Submit</button>
                 </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-center pony_container" ng-repeat="pony in allMyPonies">
+                <h1>{{pony.name}}</h1>
+                <img ng-src="{{pony.imgUrl}}" class="img-responsive" alt="">
+                <p>{{pony.username}}</p>
             </div>
         </div>
     </div>
