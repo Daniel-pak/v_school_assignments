@@ -16,8 +16,15 @@
 <body>
     <nav class="container-fluid navbar navbar-fixed-top">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 title_container">
                 <h1 class='pull-left'><span class="title_font"><a href="#/home">Foodie</a></span></h1>
+            </div>
+            <div class="col-sm-4 pull-right navigation_container">
+                <ul>
+                    <li class="nav-options"><a href="#/home">Home</a></li>
+                    <li class="nav-options"><a href="#/topRated">Hot Today</a></li>
+                    <li class="nav-options"><a href="#/myRecipes">My Recipes</a></li>
+                </ul>
             </div>
             <div class="col-sm-4" ng-controller="MainController">
                 <form action="">
@@ -28,13 +35,7 @@
                     <button class="btn" style="visibility: hidden" ng-click="searchFood(newSearch)"></button>
                 </form>
             </div>
-            <div class="col-sm-4">
-                <ul class="pull-right">
-                    <li class="nav-options"><a href="#/home">Home</a></li>
-                    <li class="nav-options"><a href="#/topRated">Hot Today</a></li>
-                    <li class="nav-options"><a href="#/myRecipes">My Recipes</a></li>
-                </ul>
-            </div>
+
         </div>
     </nav>
 
