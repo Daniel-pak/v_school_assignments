@@ -13,16 +13,36 @@
 
 <body>
     <nav class='container-fluid text-center navigation'>
-        <a class="contact_links" href="#/home"><div class="navigation_buttons">Home</div></a>
-        <a class="contact_links" href="#/skills"><div class="navigation_buttons">Skills</div></a>
-        <a class="contact_links" href="#/portfolio"><div class="navigation_buttons">Portfolio</div></a>
-        <a class="contact_links" href="#/about"><div class="navigation_buttons">About</div></a>
-        <a class="contact_links" href="#/contact"><div class="navigation_buttons">Contact</div></a>
+        <a class="contact_links" href="#/home">
+            <div class="navigation_buttons">Home</div>
+        </a>
+        <a class="contact_links" href="#/skills">
+            <div class="navigation_buttons">Skills</div>
+        </a>
+        <a class="contact_links" href="#/portfolio">
+            <div class="navigation_buttons">Portfolio</div>
+        </a>
+        <a class="contact_links" href="#/about">
+            <div class="navigation_buttons">About</div>
+        </a>
+        <!--        <a class="contact_links" href="#/contact"><div class="navigation_buttons">Contact</div></a>-->
     </nav>
-    
+
     <ng-view class="page {{pageClass}}"></ng-view>
 
 
+    <footer class="container-fluid navbar-fixed-bottom" ng-controller="MainController">
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-9 contact_menu" ng-class="{'opened_menu': clicked}">
+                <button ng-click="clicked = !clicked" ng-show="clicked === false">
+                    <h6>Send me an email</h6> <i class="pull-right glyphicon glyphicon-envelope pull-right"></i></button>
+                <textarea name="" id="" cols="45" rows="8" ng-hide="clicked === false" placeholder="Please write your message here..."></textarea>
+                <button class="send_button" ng-hide="clicked === false" ng-click="clicked = !clicked; sendEmail()">Send</button>
+                <button class="close_button" ng-hide="clicked === false" ng-click="clicked = !clicked">x</button>
+            </div>
+        </div>
+    </footer>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>

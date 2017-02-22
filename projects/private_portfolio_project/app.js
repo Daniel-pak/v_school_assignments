@@ -1,5 +1,19 @@
 angular.module("MyPortfolioApplication", ["ngRoute", 'ngAnimate', "ui.bootstrap"])
 
+.controller("MainController", ["$scope", "$window", function ($scope, $window) {
+
+    $scope.clicked = false;
+
+    var subject = "Hello!";
+    var message = "Hello!";
+    
+    $scope.sendEmail = function () {
+        $window.open("mailto:" + "PakJuhnMan@gmail.com" + "?subject=" + subject + "&body=" +message, "_self");
+    }
+
+
+}])
+
 .config(["$routeProvider", function ($routeProvider) {
     $routeProvider
         .when("/home", {
@@ -10,10 +24,10 @@ angular.module("MyPortfolioApplication", ["ngRoute", 'ngAnimate', "ui.bootstrap"
             controller: "PortfolioController",
             templateUrl: "portfolio/portfolio.html"
         })
-        .when("/contact", {
-            controller: "ContactController",
-            templateUrl: "contact/contact.html"
-        })
+        //        .when("/contact", {
+        //            controller: "ContactController",
+        //            templateUrl: "contact/contact.html"
+        //        })
         .when("/about", {
             controller: "AboutController",
             templateUrl: "about/about.html"

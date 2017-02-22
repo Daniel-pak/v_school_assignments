@@ -7,7 +7,26 @@
     z-index: 0;
 }
 
+.v_school { 
+    height: 150px;
+    width: 150px;
+}
 
+.v_school_info { 
+    clear: left; 
+}
+
+.stjohns { 
+    padding: 10px;
+}
+
+.resume_box { 
+    background-color: white;
+}
+
+.work_experience { 
+    margin-top: 50px;
+}
 /*NG Animate*/
 
 @keyframes slideLeftOut {
@@ -113,6 +132,7 @@
 .contact_links {
     position: relative;
     font-size: 1.3em;
+    text-decoration: none;
 }
 
 .contact_links:hover {
@@ -186,4 +206,41 @@ i.fa-linkedin-square:hover {
     transform: rotateY(360deg);
     background-color: aliceblue;
     opacity: .9;
+}
+
+.contact_menu { 
+    background-color: #D7DADB;
+    border-radius: 3px;
+    opacity: .8;
+}
+
+.opened_menu { 
+    position: relative;
+    padding: 10px;
+}
+
+.contact_menu h6 { 
+    display: inline-block;
+    font-size: 1em;
+}
+
+.contact_menu button { 
+    border: none;
+    background-color: #D7DADB;
+    width: 100%;
+}
+
+.glyphicon-envelope { 
+    padding-top: 8px;
+    font-size: 1.3em;
+}
+
+.send_button { 
+    width: 75% !important; 
+    display: inline-block;
+}
+
+.close_button { 
+    width: 23% !important;
+    display: inline-block;
 }
