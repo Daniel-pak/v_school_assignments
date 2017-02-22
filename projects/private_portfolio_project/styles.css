@@ -208,10 +208,19 @@ i.fa-linkedin-square:hover {
     opacity: .9;
 }
 
+.envelope_menu { 
+    width: 4%; 
+    float: right;
+    margin-right: 0px;
+    padding: 0px;
+}
+
 .contact_menu { 
     background-color: #D7DADB;
     border-radius: 3px;
     opacity: .8;
+    width: 25%;
+    float: right;
 }
 
 .opened_menu { 
@@ -243,4 +252,12 @@ i.fa-linkedin-square:hover {
 .close_button { 
     width: 23% !important;
     display: inline-block;
+}
+
+div.contact_menu { 
+    transition: all 1s ease;
+}
+
+div.contact_menu.opened_menu { 
+    transition: all 3s ease;
 }

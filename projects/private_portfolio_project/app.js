@@ -3,6 +3,7 @@ angular.module("MyPortfolioApplication", ["ngRoute", 'ngAnimate', "ui.bootstrap"
 .controller("MainController", ["$scope", "$window", function ($scope, $window) {
 
     $scope.clicked = false;
+    $scope.hovered = false;
 
     var subject = "Hello!";
     var message = "Hello!";
