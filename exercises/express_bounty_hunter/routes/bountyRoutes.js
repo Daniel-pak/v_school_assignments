@@ -1,61 +1,47 @@
 var express = require("express");
-var uuidV4 = require("uuid/v4");
+var Bounty = require("../models/bounty")
 var bountyRoutes = express.Router();
 
-var bounty = [
-    {
-        "firstName": "Jabba",
-        "lastName": "Hutt",
-        "price": 100000,
-        "isAlive": "true",
-        "type": "Sith",
-        "id": "fc48b078-0055-4604-b03e-73fa0d933995"
-    }
-];
 
 bountyRoutes.get('/bounty', function (req, res) {
-    res.send(bounty)
-})
-
-bountyRoutes.get('/bounty/:id', function (req, res) {
-    for (var i = 0; i < bounty.length; i++) {
-        if (bounty[i].id === req.params.id) {
-            return res.send(bounty[i])
+    Bounty.find(function (err, bounty) {
+        if (err) {
+            res.status(500).send(err);
         }
-    }
-    res.status(420).send({
-        message: "Not found"
+        res.send(bounty);
     })
 })
 
 bountyRoutes.post("/bounty", function (req, res) {
-    req.body.id = uuidV4();
-    bounty.push(req.body);
-    res.send(req.body);
+    var newBounty = new Bounty(req.body)
+    newBounty.save(newBounty, function (err, bounty) {
+        if (err) {
+            res.status(500).send(err);
+        }
+        res.send(bounty)
+    })
+})
+
+bountyRoutes.get('/bounty/:id', function (req, res) {
+    Bounty.findById(req.params.id, function (err, bounty) {
+        if (err) res.status(500).send(err);
+        res.send(bounty);
+    })
 })
 
 bountyRoutes.put('/bounty/:id', function (req, res) {
-    for (var i = 0; i < bounty.length; i++) {
-        if (bounty[i].id === req.params.id) {
-            bounty[i] = req.body
-        }
-    }
-    res.send({
-        message: "Edit performed successfully"
+    Bounty.findByIdAndUpdate(req.params.id, req.body, {new: true},function (err, bounty) {
+        if (err) res.status(500).send(err);
+        res.send(bounty)
     })
 })
 
 bountyRoutes.delete('/bounty/:id', function (req, res) {
-    for (var i = 0; i < bounty.length; i++) {
-        if (bounty[i].id === req.params.id) {
-            bounty.splice(i, 1);
-            res.send({
-                message: "Your item has been deleted!"
-            })
-        }
-    }
-    res.status(404).send({
-        message: "Not found"
+    Bounty.findByIdAndRemove(req.params.id, function (err) {
+        if (err) res.status(500).send(err);
+        res.send({
+            message: "Your item was succesfully deleted"
+        })
     })
 })
 

@@ -20,7 +20,7 @@ angular.module("MyApp", [])
     }
 
     $scope.delete = function (index) {
-        var idNumber = $scope.list[index].id
+        var idNumber = $scope.list[index]._id
         $scope.list.splice(index, 1);
         BountyService.deleteBounty(idNumber).then(function (response) {
             console.log(response)
@@ -28,7 +28,7 @@ angular.module("MyApp", [])
     }
 
     $scope.editItem = function (index, object) {
-        var idNumber = $scope.list[index].id;
+        var idNumber = $scope.list[index]._id;
         BountyService.editBounty(idNumber, object).then(function(response) { 
             console.log(response);
         })
