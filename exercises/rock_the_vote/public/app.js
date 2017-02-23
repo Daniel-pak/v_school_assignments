@@ -2,39 +2,36 @@ angular.module("MyApp", [])
 
 .controller("MainController", ["$scope", "VotingService", function ($scope, VotingService) {
 
+    $scope.add = false;
+    $scope.comment = false;
+
     VotingService.getVotes().then(function (response) {
         $scope.arrayOfTopics = response.data;
         console.log($scope.arrayOfTopics);
     })
 
-    $scope.add = false;
-
-    $scope.comment = false;
-
     $scope.submitComment = function (comment, index) {
-        var id = $scope.arrayOfTopics[index].id
+        var id = $scope.arrayOfTopics[index]._id
         $scope.arrayOfTopics[index].comments.push(comment);
-        VotingService.addComment(id, $scope.arrayOfTopics[index])
-        console.log(id);
+        VotingService.addComment(id, $scope.arrayOfTopics[index]).then(function (response) {
+            $scope.arrayOfTopics[index] = response.data;
+        })
     }
 
     $scope.addVote = function (index) {
-        var id = $scope.arrayOfTopics[index].id
+        var id = $scope.arrayOfTopics[index]._id;
         $scope.arrayOfTopics[index].upvote += 1;
         VotingService.upvote(id, $scope.arrayOfTopics[index]).then(function (response) {
-            console.log(response)
-        });
-        console.log(id);
-
+            console.log(response.data)
+        })
     }
 
     $scope.takeVote = function (index) {
-        var id = $scope.arrayOfTopics[index].id
+        var id = $scope.arrayOfTopics[index]._id;
         $scope.arrayOfTopics[index].upvote -= 1;
         VotingService.upvote(id, $scope.arrayOfTopics[index]).then(function (response) {
-            console.log(response)
-        });
-        console.log(id);
+            console.log(response.data)
+        })
     }
 
     $scope.addTopic = function (topic) {
@@ -48,6 +45,14 @@ angular.module("MyApp", [])
         VotingService.addTopic(topicItem).then(function (response) {
             $scope.arrayOfTopics.push(response.data);
         })
+    }
+
+    $scope.deleteItem = function (index) {
+        var id = $scope.arrayOfTopics[index]._id;
+        VotingService.deleteItem(id).then(function (response) {
+            console.log(response);
+        })
+        $scope.arrayOfTopics.splice(index, 1);
     }
 
 

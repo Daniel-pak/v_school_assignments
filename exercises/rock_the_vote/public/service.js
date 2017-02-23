@@ -22,6 +22,10 @@ angular.module("MyApp")
     this.downvote = function (id, object) {
         return $http.put(this.url2 + id, object)
     }
+    
+    this.deleteItem = function(id) { 
+        return $http.delete(this.url2 + id)
+    }
 
 
 }])

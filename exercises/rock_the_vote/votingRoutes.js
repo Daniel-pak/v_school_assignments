@@ -1,46 +1,35 @@
 var express = require("express");
 var votingRoutes = express.Router(); 
-var uuidV4 = require("uuid/v4");
-
-var topics = [ 
-    {
-        topic: "ACLU and Trump",
-        description: "ACLU racks up $24.1 million in donations over weekend: Does the ACLU stand a chance in court against Trump's ban on travel for 7 Muslim nations?", 
-        upvote: 10,
-        comments: ["Trump is shiet"], 
-        id: "123098049380"
-    },
-    {
-        topic: "ACLU and Trump",
-        description: "ACLU racks up $24.1 million in donations over weekend: Does the ACLU stand a chance in court against Trump's ban on travel for 7 Muslim nations?", 
-        upvote: 9,
-        comments: ["Trump is shiet"], 
-        id: "12309849380"
-    }
-]
-
+var VotingTopics = require("./models/votingModel");
 
 votingRoutes.get('/topics', function(req, res) { 
-    res.send(topics);
+    VotingTopics.find(function(err, topics) { 
+        if (err) res.status(500).send(err);
+        res.send(topics);
+    })
 })
 
 votingRoutes.post('/topics', function(req, res) { 
-    req.body.id = uuidV4();
-    console.log(req.body)
-    topics.push(req.body);
+    var newTopic = new VotingTopics(req.body);
     
-    res.send(req.body);
+    newTopic.save(function(err, newtopic) { 
+        if (err) res.status(500).send(err);
+        res.send(newtopic);
+    })
 })
 
 votingRoutes.put("/topics/:id", function(req, res) { 
-    var topicId = req.params.id; 
-    for (var i = 0; i < topics.length; i++) { 
-        if (topics[i].id === topicId) { 
-            topics[i] = req.body;
-            res.send(res.body);
-        }
-    }
-    res.status(500).send({message: "Error on our server cause we suck! Sowwy!"})
+    VotingTopics.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, updatedTopic) { 
+        if (err) res.status(500).send(err);
+        res.send(updatedTopic);
+    })
+})
+
+votingRoutes.delete("/topics/:id", function(req, res) { 
+    VotingTopics.findByIdAndRemove(req.params.id, function(err, topic) { 
+        if(err) res.status(500).send(err);
+        res.send({message: "Successfully deleted item"})
+    })
 })
 
 

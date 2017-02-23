@@ -2,9 +2,15 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var path = require("path");
+var mongoose = require("mongoose");
 app.use(express.static(path.join(__dirname, "public")))
 
-
+mongoose.connect("mongodb://localhost/votesDB", function(err) { 
+    if(err) { 
+        throw err;
+    }
+    console.log("Connected to DataBase")
+})
 
 app.use(bodyParser.json());
 

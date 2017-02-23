@@ -17,7 +17,7 @@
     </nav>
     <div class="container-fluid" ng-hide="!add">
         <div class="row">
-            <div class="col-xs-6 col-xs-offset-6">
+            <div class="col-xs-6 col-xs-offset-6 form">
                 <form>
                     <input type="text" class="form-control" placeholder="title" ng-model="newTopic.title">
                     <input type="text" class="form-control" placeholder="short description" ng-model="newTopic.description">
@@ -39,6 +39,7 @@
                     </ul>
                     <button class="btn btn-success" ng-click="addVote($index)"><i class="glyphicon glyphicon-thumbs-up"></i></button>
                     <button class="btn btn-danger" ng-click="takeVote($index)"><i class="glyphicon glyphicon-thumbs-down"> </i></button>
+                    <button class="btn btn-warning" ng-click="deleteItem($index)"><i class="glyphicon glyphicon-trash"></i></button>
                 </div>
                 <button class="btn btn-warning" ng-click="comment = !comment">Add a comment!</button>
                 <div class="container" ng-hide="!comment">
@@ -57,7 +58,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="app.js"></script>
     <script src="service.js"></script>
-    <script src="directive/directive.js"></script>
 </body>
 
 </html>

@@ -16,3 +16,8 @@ h1 {
     background-color: beige;
     
 }
+
+.form { 
+    position: absolute; 
+    z-index: 1;
+}
