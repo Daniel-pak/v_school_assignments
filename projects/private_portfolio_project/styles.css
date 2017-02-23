@@ -208,6 +208,8 @@ i.fa-linkedin-square:hover {
     opacity: .9;
 }
 
+
+
 .envelope_menu { 
     width: 4%; 
     float: right;
@@ -221,11 +223,14 @@ i.fa-linkedin-square:hover {
     opacity: .8;
     width: 25%;
     float: right;
+    height: 35px;
+    bottom: 0px;
 }
 
 .opened_menu { 
     position: relative;
     padding: 10px;
+    height: 220px;
 }
 
 .contact_menu h6 { 
@@ -255,9 +260,10 @@ i.fa-linkedin-square:hover {
 }
 
 div.contact_menu { 
-    transition: all 1s ease;
+    transition: all .5s ease;
 }
 
 div.contact_menu.opened_menu { 
-    transition: all 3s ease;
+    transition: height 3s ease;
 }
+
