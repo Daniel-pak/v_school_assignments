@@ -16,7 +16,6 @@ nav {
 
 .form_hidden {
     z-index: 1;
-    position: absolute;
 }
 
 .btn-default {
@@ -33,4 +32,16 @@ div.add_pony_form h1 {
 
 .pony_container { 
     background-color: white;
+    opacity: .9;
 }    
+
+div.pony_container { 
+    height: 350px;
+    position: relative;
+}
+
+div.pony_container button { 
+    position: absolute; 
+    bottom: 5px;
+    right: 5px;
+}

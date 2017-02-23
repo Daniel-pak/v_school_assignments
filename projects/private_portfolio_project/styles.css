@@ -195,42 +195,52 @@ i.fa-linkedin-square:hover {
 }
 
 .skills_icon {
-    font-size: 20em
+    margin-top: 50px;
 }
 
 .language_icon {
-    transition: transform 0.5s ease;
+    opacity: .8;
+    transition: opacity 2s ease;
+    padding: 20px !important;
 }
 
 .language_icon:hover {
-    transform: rotateY(360deg);
+/*    transform: rotateY(360deg);*/
     background-color: aliceblue;
-    opacity: .9;
+    opacity: 1;
 }
 
 
 
+/*
 .envelope_menu { 
     width: 4%; 
     float: right;
     margin-right: 0px;
     padding: 0px;
 }
+*/
 
 .contact_menu { 
     background-color: #D7DADB;
     border-radius: 3px;
     opacity: .8;
     width: 25%;
-    float: right;
     height: 35px;
     bottom: 0px;
+    transition: all .5s ease;
+}
+
+.contact_menu textarea { 
+    position: relative; 
+    width: 100% !important;
 }
 
 .opened_menu { 
     position: relative;
     padding: 10px;
     height: 220px;
+    opacity: 1;
 }
 
 .contact_menu h6 { 
@@ -259,11 +269,32 @@ i.fa-linkedin-square:hover {
     display: inline-block;
 }
 
-div.contact_menu { 
-    transition: all .5s ease;
-}
-
 div.contact_menu.opened_menu { 
-    transition: height 3s ease;
+    transition: height 2s, opacity 1s, ease;
 }
 
+i.colored { 
+    font-size: 15em;
+}
+
+.portfolio_container { 
+    margin-top: 50px;
+}
+
+.portfolio_item { 
+    padding: 5px;
+    background-color: beige;
+    opacity: .8;
+    transition: opacity 1s ease;
+}
+
+.portfolio_item:hover { 
+    opacity: 1;
+}
+
+@media (max-width: 685px) { 
+    .contact_menu { 
+        width: 100% ;
+    }
+}
+    

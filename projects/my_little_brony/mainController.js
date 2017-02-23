@@ -1,14 +1,17 @@
-angular.module("BronyCentralApp", [])
+angular.module("BronyCentralApp", ['ngRoute'])
 
-.controller("MainController", ["$scope", "PonyService", function($scope, PonyService){ 
+.config(["$routeProvider", function ($routeProvider) {
+    $routeProvider
+        .when("/home", {
+            templateUrl: "home/home.html",
+            controller: "HomeController"
+        })
+        .when("/myFavorites", {
+            templateUrl: "myFavorites/myFavorites.html",
+            controller: "MyFavoritesController"
+        })
+        .otherwise({ 
+            redirectTo: "/home"
+        })
 
-    $scope.boolean = true;
-    
-    $scope.submitPony = function(pony) { 
-        PonyService.validatePony(pony)
-    }
-
-    PonyService.getMyPonies().then(function(response) { 
-       $scope.allMyPonies = response.data;
-    })
-}]) 
+}])

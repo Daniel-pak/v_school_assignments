@@ -1,0 +1,13 @@
+    <div class="container form_hidden" ng-hide="boolean == true">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 add_pony_form">
+                <h1>Submit your pony here!</h1>
+                <form action="ponyForm">
+                    <input type="text" class="form-control" placeholder="Pony Name" ng-model="newPony.name" ng-minlength="3" required>
+                    <input type="text" class="form-control" placeholder="Username" ng-model="newPony.username" required>
+                    <input type="text" class="form-control" placeholder="Image Source Url" ng-model="newPony.imgUrl" required>
+                    <button type="button" class="btn btn-warning" ng-click="submitPony(newPony)" ng-disabled="ponyForm.$validate">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>

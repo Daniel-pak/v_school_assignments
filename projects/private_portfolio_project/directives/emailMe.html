@@ -1,0 +1,30 @@
+<!--
+<div class="row">
+    <div class="col-sm-3 col-sm-offset-9 envelope_menu" ng-mouseleave="hovered = false; clicked = false" ng-class="{'opened_menu': clicked === true, 'contact_menu': hovered === true}">
+        <button ng-click="clicked = !clicked" ng-show="clicked === false">
+            <h6 ng-hide="hovered === false">Send me an email</h6>
+            <i class="pull-right glyphicon glyphicon-envelope" ng-mouseover="hovered = !hovered"></i>
+        </button>
+
+        <textarea name="" id="" cols="45" rows="8" ng-hide="clicked === false" placeholder="Please write your message here..."></textarea>
+
+        <button class="send_button" ng-hide="clicked === false" ng-click="clicked = !clicked; sendEmail()">Send</button>
+
+        <button class="close_button" ng-hide="clicked === false" ng-click="clicked = false; hovered = false">x</button>
+
+    </div>
+</div>-->
+
+<footer class="container-fluid navbar-fixed-bottom" ng-controller="MainController">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 col-sm-offset-9 contact_menu" ng-mouseleave="clicked = false" ng-class="{'opened_menu': clicked === true}">
+            <button ng-click="clicked = !clicked" ng-show="clicked === false">
+                <h6>Send me an email</h6>
+                <i class="pull-right glyphicon glyphicon-envelope"></i>
+            </button>
+            <textarea ng-model="message" name="" id="" cols="40" rows="8" ng-hide="clicked === false" placeholder="Please write your message here..."></textarea>
+            <button class="send_button" ng-hide="clicked === false" ng-click="clicked = !clicked; sendEmail(message)">Send</button>
+            <button class="close_button" ng-hide="clicked === false" ng-click="clicked = false; hovered = false">x</button>
+        </div>
+    </div>
+</footer>
