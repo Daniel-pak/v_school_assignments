@@ -7,26 +7,28 @@
     z-index: 0;
 }
 
-.v_school { 
+.v_school {
     height: 150px;
     width: 150px;
 }
 
-.v_school_info { 
-    clear: left; 
+.v_school_info {
+    clear: left;
 }
 
-.stjohns { 
+.stjohns {
     padding: 10px;
 }
 
-.resume_box { 
+.resume_box {
     background-color: white;
 }
 
-.work_experience { 
+.work_experience {
     margin-top: 50px;
 }
+
+
 /*NG Animate*/
 
 @keyframes slideLeftOut {
@@ -144,7 +146,7 @@ body {
     background-size: cover;
 }
 
-.navigation {
+.foobar {
     padding-top: 15px;
     padding-bottom: 20px;
     background-color: white;
@@ -205,11 +207,10 @@ i.fa-linkedin-square:hover {
 }
 
 .language_icon:hover {
-/*    transform: rotateY(360deg);*/
+    /*    transform: rotateY(360deg);*/
     background-color: aliceblue;
     opacity: 1;
 }
-
 
 
 /*
@@ -221,7 +222,7 @@ i.fa-linkedin-square:hover {
 }
 */
 
-.contact_menu { 
+.contact_menu {
     background-color: #D7DADB;
     border-radius: 3px;
     opacity: .8;
@@ -231,70 +232,107 @@ i.fa-linkedin-square:hover {
     transition: all .5s ease;
 }
 
-.contact_menu textarea { 
-    position: relative; 
+.contact_menu textarea {
+    position: relative;
     width: 100% !important;
 }
 
-.opened_menu { 
+.opened_menu {
     position: relative;
     padding: 10px;
     height: 220px;
     opacity: 1;
 }
 
-.contact_menu h6 { 
+.contact_menu h6 {
     display: inline-block;
     font-size: 1em;
 }
 
-.contact_menu button { 
+.contact_menu button {
     border: none;
     background-color: #D7DADB;
     width: 100%;
 }
 
-.glyphicon-envelope { 
+.glyphicon-envelope {
     padding-top: 8px;
     font-size: 1.3em;
 }
 
-.send_button { 
-    width: 75% !important; 
+.send_button {
+    width: 75% !important;
     display: inline-block;
 }
 
-.close_button { 
+.close_button {
     width: 23% !important;
     display: inline-block;
 }
 
-div.contact_menu.opened_menu { 
+div.contact_menu.opened_menu {
     transition: height 2s, opacity 1s, ease;
 }
 
-i.colored { 
+i.colored {
     font-size: 15em;
 }
 
-.portfolio_container { 
+.portfolio_container {
     margin-top: 50px;
 }
 
-.portfolio_item { 
+.portfolio_item {
     padding: 5px;
     background-color: beige;
     opacity: .8;
     transition: opacity 1s ease;
 }
 
-.portfolio_item:hover { 
+.portfolio_item:hover {
     opacity: 1;
 }
 
-@media (max-width: 685px) { 
-    .contact_menu { 
-        width: 100% ;
+.aboutme {
+    margin-top: 80px;
+    background-color: white;
+    opacity: .9;
+    margin-bottom: 50px;
+}
+
+div.home a {
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width: 802px) {
+    .navigation {
+        height: 150px;
+    }
+    .page {
+        margin-top: 150px;
+    }
+    .navigation_buttons { 
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .small_screen { 
+        margin-bottom: 100px;
     }
 }
-    
+
+@media (max-width: 685px) {
+    .contact_menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 414px) {
+    .navigation {
+        height: 150px;
+    }
+    .page {
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+}   

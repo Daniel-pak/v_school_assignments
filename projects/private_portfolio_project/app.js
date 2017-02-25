@@ -1,4 +1,4 @@
-angular.module("MyPortfolioApplication", ["ngRoute", 'ngAnimate', "ui.bootstrap"])
+angular.module("MyPortfolioApplication", ["ngRoute", 'ngAnimate'])
 
 .controller("MainController", ["$scope", "$window", function ($scope, $window) {
 
@@ -23,10 +23,6 @@ angular.module("MyPortfolioApplication", ["ngRoute", 'ngAnimate', "ui.bootstrap"
             controller: "PortfolioController",
             templateUrl: "portfolio/portfolio.html"
         })
-        //        .when("/contact", {
-        //            controller: "ContactController",
-        //            templateUrl: "contact/contact.html"
-        //        })
         .when("/about", {
             controller: "AboutController",
             templateUrl: "about/about.html"
