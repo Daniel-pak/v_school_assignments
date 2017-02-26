@@ -15,7 +15,11 @@ The walking function allows the user to walk with each press of 'w' and has a 1/
 
 The walkingTillAttacked function, allows the user to choose if they want to fight or run. This is done through an input of y or n. If the user tries to run, there is a 50% chance that it will be successful, if the run is successful, the walking function is called again. If not, then the fightMonster function is activated. 
 
-The fightMonster function created a total damage variable that takes into account a scaling generator. The user can attack with the 'a' key input. The function then checks if the damage will kill the monster by comparing these values. If the monster lives, he attacks back and vice versa. If the monster is killed, then the monsters.isAlive boolean is changed to false and the winner function is activated. An item is pushed into the players inventory - a text based story then ensues with a congratulatory message. However, if the monster's attack is greater than the player health, the death function is activated and the user is prompted to restart the game. 
+The fightMonster function created a total damage variable that takes into account a scaling generator. The user can attack with the 'a' key input. The function then checks if the damage will kill the monster by comparing these values. If the monster lives, he attacks back and vice versa until one dies. If the monster is killed, then the monsters.isAlive boolean is changed to false and the winner function is activated. 
+
+The winner function allows an item is pushed into the players inventory - a text based story then ensues with a congratulatory message. 
+
+However, if the monster's attack is greater than the player health, the death function is activated and the user is prompted to restart the game. 
 
 	
 
