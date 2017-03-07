@@ -3,7 +3,6 @@ var recipesRoutes = express.Router();
 var request = require("request");
 
 recipesRoutes.get("/food", function (req, res) {
-
     request("http://food2fork.com/api/search?key=6d05eac0a6714496324f866d0f413653", function (error, response, body) {
         res.send(body);
     })
@@ -12,7 +11,6 @@ recipesRoutes.get("/food", function (req, res) {
 recipesRoutes.get("/food/:id", function (req, res) {
 
     var id = req.params.id
-
     request(`http://food2fork.com/api/get?key=6d05eac0a6714496324f866d0f413653&rId=${id}`, function (error, response, body) {
         res.send(body);
     })
@@ -64,19 +62,6 @@ recipesRoutes.delete("/myRecipes/:id", function (req, res) {
 recipesRoutes.get("/search/:search", function (req, res) {
 
     var searchWord = req.params.search;
-
-//    var newSearchWord = "";
-//
-//    for (var i = 0; i < searchWord.length; i++) {
-//        if (searchWord[i] === " ") {
-//            newSearchWord += "%20"
-//        } else {
-//            newSearchWord += searchWord[i];
-//        }
-//    }
-//
-//    console.log(newSearchWord);
-
         request(`http://food2fork.com/api/search?key=6d05eac0a6714496324f866d0f413653&q=${searchWord}`, function (error, response, body) {
             res.send(body);
         })

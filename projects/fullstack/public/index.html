@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MapApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="container navbar navbar-inverse">
+        <div class="row">
+            <ul>
+                <li><a href="#/home">Home</a></li>
+                <li><a href="">Plan</a></li>
+            </ul>
+            <ul class="pull-right">
+                <li class="btn navbar-btn"><a href="">Sign In</a></li>
+                <li class="btn navbar-btn"><a href="">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ng-view></ng-view>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBHftUQVrdrHqiGk6eRmX6kY_wFGRdIMY"></script>
+    <script src='app.js'></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/services/getMap.js"></script>
+</body>
+
+</html>
