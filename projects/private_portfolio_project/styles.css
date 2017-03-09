@@ -23,6 +23,7 @@
 .resume_box {
     background-color: white;
     opacity: 0.9;
+    margin: 10px;
 }
 
 .work_experience {
@@ -345,3 +346,7 @@ div.home a {
         padding-bottom: 20px;
     }
 }   
+
+.about_container { 
+    margin-top: 5%;
+}
