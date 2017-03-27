@@ -1,10 +1,11 @@
 angular.module("MyPortfolioApplication")
 
-.controller("PortfolioController", ["$scope", function($scope){ 
-    
-    $scope.click1 = false;
-    $scope.click2 = false;
-    
-    $scope.pageClass = "page-portfolio"
-    
+    .controller("PortfolioController", ["$scope", '$window', function ($scope, $window) {
+
+        $scope.pageClass = "page-portfolio"
+
+        $scope.liveLink = function () {
+            $window.open('http://45.55.225.168:8000/#/home', '_blank');
+        }
+
 }])
