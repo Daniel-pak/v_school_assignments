@@ -4,8 +4,8 @@ angular.module("MyPortfolioApplication")
 
         $scope.pageClass = "page-portfolio"
 
-        $scope.liveLink = function () {
-            $window.open('http://45.55.225.168:8000/#/home', '_blank');
+        $scope.liveLink = function (port) {
+            $window.open(`http://45.55.225.168:${port}/#/home`, '_blank');
         }
 
 }])
